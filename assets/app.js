@@ -21,15 +21,22 @@
 
   /* ── theme ──────────────────────────────────────────────── */
   var root = document.documentElement;
+
+  // Only ever stamp data-theme for an explicit choice. With nothing stamped the
+  // CSS media query handles "system", which is what most viewers are on.
+  function effectiveTheme() {
+    var a = root.getAttribute("data-theme");
+    if (a === "dark" || a === "light") return a;
+    return (window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches)
+      ? "dark" : "light";
+  }
   try {
     var saved = localStorage.getItem("basic-theme");
-    if (saved) root.setAttribute("data-theme", saved);
-    else if (window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches)
-      root.setAttribute("data-theme", "dark");
+    if (saved === "dark" || saved === "light") root.setAttribute("data-theme", saved);
   } catch (e) {}
 
   $("#theme").addEventListener("click", function () {
-    var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    var next = effectiveTheme() === "dark" ? "light" : "dark";
     root.setAttribute("data-theme", next);
     try { localStorage.setItem("basic-theme", next); } catch (e) {}
   });
@@ -65,8 +72,10 @@
       return '<p class="redacted">[' + esc(b.x) + "]</p>";
     }).join("");
 
+    // the notebook's own heading, unless it just repeats the date above it
     var head = "";
-    if (e.head) head = '<div class="written-head">' + esc(e.head) + "</div>";
+    if (e.head && e.head !== e.pretty)
+      head = '<div class="written-head">' + esc(e.head) + "</div>";
 
     var dateBits = "";
     if (e.pretty) {
