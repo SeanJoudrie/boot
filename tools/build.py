@@ -1,0 +1,152 @@
+#!/usr/bin/env python3
+"""Turn source/journal.txt into data/entries.js.
+
+Run:  python3 tools/build.py
+"""
+import json, os, re, sys
+from datetime import date
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SRC = os.path.join(ROOT, "source", "journal.txt")
+OUT = os.path.join(ROOT, "data", "entries.js")
+
+CHAPTERS = [
+    ("reception", "Reception",   "Jan 12 - 16",  "Fort Jackson intake. The worst days of the whole thing."),
+    ("red",       "Red Phase",   "Jan 16 - Feb 3", "First weeks with the platoon. Cold, hunger, and Sundays."),
+    ("hammer",    "The Hammer",  "Feb 4 - 5",    "First field exercise. Movements, foxholes, a 5 mile hike."),
+    ("range",     "The Range",   "Feb 6 - 22",   "Rifle marksmanship, qualification, and running the bay."),
+    ("anvil",     "The Anvil",   "Feb 23 - 26",  "Three days in the field. The first foxhole."),
+    ("blue",      "Blue Phase",  "Feb 27 - Mar 9","Land nav, grenades, war news, confession."),
+    ("forge",     "The Forge",   "Mar 10 - 13",  "The final test. Four days, 12 mile ruck, night infiltration."),
+    ("last",      "Last Days",   "Mar 14 - 25",  "Cleaning weapons, yearbooks, goodbyes."),
+    ("home",      "Home",        "After",        "Written from the other side."),
+]
+CH_KEYS = {c[0] for c in CHAPTERS}
+
+MONTHS = ["January","February","March","April","May","June","July","August",
+          "September","October","November","December"]
+
+
+def parse_meta(line):
+    meta = {}
+    for part in line[2:].split("|"):
+        part = part.strip()
+        if not part:
+            continue
+        if "=" not in part:
+            continue
+        k, v = part.split("=", 1)
+        meta[k.strip()] = v.strip()
+    return meta
+
+
+def pretty_date(iso):
+    if not iso:
+        return ""
+    y, m, d = (int(x) for x in iso.split("-"))
+    return "%s %d, %d" % (MONTHS[m - 1], d, y)
+
+
+def weekday(iso):
+    y, m, d = (int(x) for x in iso.split("-"))
+    return ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"][
+        date(y, m, d).weekday()]
+
+
+def main():
+    with open(SRC, encoding="utf-8") as fh:
+        raw = fh.read()
+
+    entries = []
+    current = None
+    buf = []
+
+    def flush_para():
+        text = " ".join(" ".join(buf).split())
+        buf.clear()
+        if text and current is not None:
+            current["blocks"].append({"t": "p", "x": text})
+
+    for line in raw.split("\n"):
+        if line.startswith("@@"):
+            if current is not None:
+                flush_para()
+                entries.append(current)
+            meta = parse_meta(line)
+            ch = meta.get("ch", "red")
+            if ch not in CH_KEYS:
+                sys.exit("unknown chapter %r" % ch)
+            current = {
+                "date": meta.get("date", ""),
+                "approx": meta.get("approx", "yes") == "yes",
+                "head": meta.get("head", ""),
+                "title": meta.get("title", ""),
+                "ch": ch,
+                "blocks": [],
+            }
+            continue
+        if current is None:
+            continue  # file header comments
+        stripped = line.strip()
+        if not stripped:
+            flush_para()
+            continue
+        m = re.match(r"^\[\[(art|redacted):\s*(.+?)\]\]$", stripped)
+        if m:
+            flush_para()
+            current["blocks"].append({"t": m.group(1), "x": m.group(2)})
+            continue
+        buf.append(stripped)
+
+    if current is not None:
+        flush_para()
+        entries.append(current)
+
+    # day 1 = Jan 12 2026, ship day
+    start = date(2026, 1, 12)
+    for i, e in enumerate(entries, 1):
+        e["id"] = "p%d" % i
+        e["n"] = i
+        words = sum(len(b["x"].split()) for b in e["blocks"] if b["t"] == "p")
+        e["words"] = words
+        if e["date"]:
+            y, m, d = (int(x) for x in e["date"].split("-"))
+            e["pretty"] = pretty_date(e["date"])
+            e["dow"] = weekday(e["date"])
+            delta = (date(y, m, d) - start).days + 1
+            e["day"] = delta if delta <= 74 else None
+        else:
+            e["pretty"] = ""
+            e["dow"] = ""
+            e["day"] = None
+
+    chapters = []
+    for key, name, span, blurb in CHAPTERS:
+        ids = [e["id"] for e in entries if e["ch"] == key]
+        chapters.append({"key": key, "name": name, "span": span, "blurb": blurb,
+                         "count": len(ids), "first": ids[0] if ids else None})
+
+    total_words = sum(e["words"] for e in entries)
+    art = sum(1 for e in entries for b in e["blocks"] if b["t"] == "art")
+
+    payload = {
+        "entries": entries,
+        "chapters": chapters,
+        "stats": {"pages": len(entries), "words": total_words, "art": art},
+    }
+
+    os.makedirs(os.path.dirname(OUT), exist_ok=True)
+    with open(OUT, "w", encoding="utf-8") as fh:
+        fh.write("// GENERATED by tools/build.py from source/journal.txt -- do not edit by hand.\n")
+        fh.write("window.JOURNAL = ")
+        json.dump(payload, fh, ensure_ascii=False, indent=1)
+        fh.write(";\n")
+
+    print("wrote %s" % OUT)
+    print("  %d pages, %d words, %d art slots" % (len(entries), total_words, art))
+    for c in chapters:
+        print("  %-12s %3d pages" % (c["name"], c["count"]))
+
+
+if __name__ == "__main__":
+    main()

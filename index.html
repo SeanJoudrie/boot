@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Basic — a boot camp journal</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a class="brand" href="#cover">
+      <span class="brand-mark">D/2</span>
+      <span class="brand-txt"><b>Basic</b><em>Fort Jackson, Jan–Mar 2026</em></span>
+    </a>
+
+    <nav class="tabs" role="tablist">
+      <button class="tab is-on" data-view="journal">Journal</button>
+      <button class="tab" data-view="ask">Ask me</button>
+      <button class="tab" data-view="about">About</button>
+    </nav>
+
+    <div class="tools">
+      <label class="search">
+        <input id="q" type="search" placeholder="Search the journal…" autocomplete="off" spellcheck="false">
+        <kbd>/</kbd>
+      </label>
+      <button id="theme" class="icon-btn" title="Toggle light / dark">◐</button>
+    </div>
+  </div>
+  <div class="progress"><i id="progressBar"></i></div>
+</header>
+
+<!-- ───────────────────────── JOURNAL ───────────────────────── -->
+<main id="view-journal" class="view">
+  <section id="cover" class="cover">
+    <div class="wrap">
+      <p class="kicker">Delta Company · 2nd Platoon · 71 Bravo</p>
+      <h1>Basic</h1>
+      <p class="sub">A journal kept in a notebook at Fort Jackson, South Carolina,
+        from the morning I shipped out to the morning before family day.
+        Transcribed as written — typos, voice-to-text and all.</p>
+      <ul class="statline">
+        <li><b id="stPages">—</b> pages</li>
+        <li><b id="stWords">—</b> words</li>
+        <li><b>74</b> days</li>
+        <li><b id="stQ">—</b> questions answered</li>
+      </ul>
+      <p class="scrolltip">Scroll, or jump to a chapter ↓</p>
+    </div>
+  </section>
+
+  <div class="wrap layout">
+    <aside class="rail">
+      <div class="rail-in">
+        <h2 class="rail-h">Chapters</h2>
+        <ol id="chapters" class="chapters"></ol>
+        <div class="rail-jump">
+          <label for="jump">Go to page</label>
+          <input id="jump" type="number" min="1" placeholder="1–105">
+        </div>
+        <p class="rail-note">Use <kbd>J</kbd>/<kbd>K</kbd> or arrow keys to step page to page.</p>
+      </div>
+    </aside>
+
+    <div class="pages" id="pages"></div>
+  </div>
+</main>
+
+<!-- ─────────────────────────── ASK ─────────────────────────── -->
+<main id="view-ask" class="view" hidden>
+  <div class="wrap">
+    <section class="ask-head">
+      <h1>Ask me about basic</h1>
+      <p>Pick a question. Every answer is stitched together from the journal itself,
+        with the actual pages quoted underneath so you can go read the source.</p>
+      <div id="cats" class="cats"></div>
+    </section>
+    <div id="questions" class="qlist"></div>
+    <p id="qEmpty" class="empty" hidden>Nothing matches that. Try the Journal tab — search runs over every page there too.</p>
+  </div>
+</main>
+
+<!-- ────────────────────────── ABOUT ────────────────────────── -->
+<main id="view-about" class="view" hidden>
+  <div class="wrap prose">
+    <h1>About this thing</h1>
+
+    <p>This is my basic training journal. I wrote it in a notebook at Fort Jackson between
+      January 12 and March 25, 2026, mostly in two-to-ten minute windows at the end of
+      sixteen hour days, or on fire guard at one in the morning. A lot of it was dictated
+      with voice-to-text by a guy who was cold, starving and running on five hours of sleep.</p>
+
+    <h2>What was and wasn't changed</h2>
+    <ul>
+      <li><b>The words are untouched.</b> Nothing was rewritten, cleaned up, or corrected.
+        The mangled voice-to-text is part of the record.</li>
+      <li><b>Paragraph breaks were added</b> so it's readable on a screen. That's the only
+        formatting liberty taken.</li>
+      <li><b>Page titles and chapter names were added</b> for navigation. They aren't in the notebook.</li>
+      <li><b>Dates marked <span class="approx-key">≈</span> are estimates</b> — inferred from
+        what the entry says about the day. Dates without it were written on the page.
+        Where the notebook has an obvious slip (a "February 2" entry sitting in the middle
+        of February 11), the original heading is kept and the estimate sits beside it.</li>
+      <li><b>The rough parts stayed in.</b> Slurs, the passage about race in the barracks,
+        the parts about other trainees' worst days. It's a private journal written by
+        somebody in a bad state, not a publication. Editing it after the fact would make
+        it a different document.</li>
+    </ul>
+
+    <h2>The answers</h2>
+    <p>The Ask tab has <b id="stQ2">—</b> preset questions. The answers are written in my
+      voice but assembled strictly from what's in these pages — no outside memory, nothing
+      invented. Every quoted line under an answer is checked against the source at build
+      time, so if a quote is there, it's really in the notebook on that page.</p>
+
+    <h2>The drawings</h2>
+    <p>There are <b id="stArt">—</b> drawings noted in the journal that aren't scanned in yet.
+      They show up as empty slots with the slot name on them, like <code>p5-1</code>.
+      Drop the image into <code>images/</code> and add a line to <code>data/art.js</code>
+      and it'll appear in place.</p>
+
+    <h2>Names</h2>
+    <p>Everyone here is as they appear in the notebook — mostly last names, a few nicknames,
+      one or two people who exist under three different spellings because of voice-to-text.
+      Karagach and Arthur are the same guy. Hackerman is Herman. Cult rider, colt and
+      Kaltrider are all Kaltrider.</p>
+
+    <h2>How it's built</h2>
+    <p>Plain HTML, CSS and JavaScript, no build step required to view it — open
+      <code>index.html</code>. The journal text lives in <code>source/journal.txt</code>
+      and the questions in <code>source/questions.txt</code>; both are plain text.
+      Run <code>python3 tools/build.py</code> and <code>python3 tools/build_questions.py</code>
+      after editing either one.</p>
+  </div>
+</main>
+
+<div id="toast" class="toast" hidden></div>
+
+<script src="data/entries.js"></script>
+<script src="data/questions.js"></script>
+<script src="data/art.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

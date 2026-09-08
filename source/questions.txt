@@ -1,0 +1,944 @@
+# Preset questions.
+# Format:
+#   ## cat=Category name
+#   ?? Question text
+#   plain lines = answer paragraphs (blank line separates)
+#   > pID | verbatim quote from that page
+#   + pID pID  = extra pages to link
+# Every > quote is checked against the journal at build time.
+
+## cat=The big ones
+
+?? How was basic?
+
+Honestly? Reception nearly broke me and the back half I loved. Those are both true and they're about six weeks apart.
+
+The first three days were the worst days of my life to that point. 36+ hours awake, 20 degree nights, blood draws, a kid trying to kill himself in front of me. I wrote that I'd go back in time and tell myself not to go. By March I was writing that it felt like home and I was almost sad it was over.
+
+The thing nobody tells you is that it isn't mostly hard. It's mostly boring, and cold, and hungry, with about five minutes of actual soldiering scattered through a sixteen hour day. The hard parts I could take. It was the dullness and the shivering that got me.
+
+> p3 | genuinely every second here is pain I cannot believe how much I took for granted
+> p92 | It feels good. It really feels like home here. I'm almost sad. It's over almost
++ p4 p53 p89
+
+?? What was the hardest part?
+
+The cold. Not the workouts, not the yelling, not being away. The cold.
+
+Second to that: reception, days one through five. And after that, the boredom — standing perfectly still and silent for sixteen hours with nothing to look at but the back of a shaved head.
+
+> p24 | I cannot reiterate enough how I never want to feel cold again it's not in aversion to a minor discomfort.
+> p7 | It's not the toughness that's getting me. It's just a dullness
++ p3 p16 p77 p53
+
+?? What was the best part?
+
+Digging my first foxhole at the Anvil and sleeping in it. I built a windproof shelter with my own hands, had a rifle, dirt on my face, food in my stomach, and I was the closest to happy I got the whole time.
+
+Close second is the obstacle course, where I finished best out of 220 people, and the buddy team fire drills where I actually felt like a soldier instead of a guy standing in a field.
+
+> p78 | It was the closest thing I've been to being happy my time here
+> p79 | I love and miss my first Foxhall. I will always remember you.
++ p34 p72
+
+?? What was your worst day?
+
+Day two of reception. Over 36 hours working nonstop, 40 hours before we lay down for 40 minutes, a kid tackled trying to kill himself, blood taken constantly, and I had about two minutes in the whole day to write anything down.
+
+The runner-up is February 23rd — fourteen hours of standing still shivering, two more people hospitalized, and I was in short sleeves at 20 degrees.
+
+> p3 | After 40 hours we lined up outside for 40 minutes to sleep
+> p77 | terrible shit fuck day genuine bone chilling cold 14 hours of shivering holding on consciousness standing still
++ p4
+
+?? What was your best day?
+
+March 1st. Confession. I'd spent the night before writing about how good I am at lying to myself, and then I sat in a room and said all of it out loud to a priest who actually listened instead of waving me off with a few Hail Marys.
+
+> p83 | My voice remain a steady of steel yet my eyes poured like a faucet onto the bleacher chairs.
+> p83 | I felt relieved a huge weight off my shoulders
++ p82 p80
+
+?? Would you do it again?
+
+Yes, but I'd do it differently. By the end I wrote that I felt made for this kind of life, and that suburbia is what feels like the dream now.
+
+That said, on day three I wrote that I would go back in time and tell myself not to join. Both of those are in this book. I'm not going to pretend the first one cancels the second.
+
+> p97 | I feel very successful, but I would also do things differently. Given a second chance I feel like I was made for this kind of life
+> p4 | I would go back in time to tell myself not to leave. Do not join spend as much time with Sarah as you can.
+
+?? What surprised you the most?
+
+That it wasn't a movie. I expected a gym with yelling. I got sixteen hours of standing silent in the cold, no camaraderie for weeks, no time to eat or think or sleep, and then somewhere in there it quietly turned into the best group of guys I've known.
+
+Also how much death and injury there was. Two people died in my first week there. I watched somebody get wheeled into an ambulance unconscious after standing in penguin formation next to him days before.
+
+> p3 | I thought that this would be like Jim and yelling but it's not like that at all.
+> p10 | it is alarming the amount of death and injury in just a week.
++ p6 p31
+
+?? Did you ever want to quit?
+
+Constantly, and never seriously. I didn't have the option — quitting would have ruined my life and I knew it. But early on I daydreamed about a blood test coming back with something wrong with me, so I could leave without it being quitting or failing.
+
+> p4 | A big part of me almost hoped I could get blood results back and I have disease like cancer or something like that that dismisses me so that way I don't quit or fail.
+> p14 | I don't have a choice to quit, but I'd lie if I said, I didn't daydream, even though it would ruin my life
+
+?? Did it change you?
+
+Yes, but not the way people assume. It didn't make me tougher exactly. It stripped everything out and what was left was a guy who wants to draw, write, read, and be left alone half the time — basically who I was in sixth grade.
+
+I stopped wanting to drink, club, doomscroll, chase status. I started keeping the Sabbath. I came out wanting to make things instead of consume them.
+
+> p49 | Am I returning to myself or becoming something new
+> p49 | I've outgrown drinking clubbing social media in the general chase life And I'm at the stage where I only want to make
++ p65 p86
+
+## cat=The cold
+
+?? How cold was it, really?
+
+South Carolina had its coldest winter in a long time and we were in it in short sleeves. 21 degrees the day I landed. 16 degree mile runs that felt like 5 with wind. 18 degrees the Sunday they cancelled church because it was too icy. Guys' glasses froze to their faces.
+
+By the end I had nerve damage in my hands and toes and one toe went entirely white and numb — I could bang it into a dresser as hard as I could and feel nothing.
+
+> p26 | this is apparently the coldest winter here a long time.
+> p23 | Also my toe is entirely white. It's hard numb, even if I bang it as hard as I can into my dresser.
+> p77 | nerve damage in my hands and toes are getting really bad
++ p29 p31
+
+?? What did the cold actually feel like?
+
+It's the one thing I wrote about the best, because I had sixteen hours a day to find the words.
+
+> p16 | It's a kind that penetrates the tips of your fingers, twisting itself like vines across your bones and veins Constricting as it shoots up your elbow to the point your hands feel dead as if the air stole them from you.
+> p16 | the little I can squeeze my purple red hands leaves a pure white mark that takes seconds to disappear. You are not allowed to move.
+> p24 | It feels like getting my teeth pulled for hours and hours While standing on a Shirley sprained ankle
++ p50 p77
+
+?? Did people actually get hurt from the cold?
+
+Yes. Constantly. Three kids went down from hypothermia on one Sunday. Two more got hospitalized before the Anvil. One kid had to leave basic entirely — he shivered so hard that apparently his bones ground together and fed bone marrow into his bloodstream and liver, and he started having seizures.
+
+They gave us a brief on cold weather illness prevention, which was funny, because they wouldn't let us wear layers.
+
+> p31 | he shivered so hard apparently his bones grind together and fed small particles of his bone marrow to his bloodstream and liver, giving him seizures.
+> p39 | they gave a brief about cold weather, illness prevention, which was funny because they don't allow us to have layers.
++ p29 p77
+
+?? Why couldn't you just wear more layers?
+
+Because sniffle gear wasn't authorized and they threatened an Article 15 over it, on the theory that we'd overheat. So we had casualties instead.
+
+I started breaking uniform code in week two and never stopped. Extra t-shirt, shorts, long PT pants underneath. Got caught once with two shirts and did ten push-ups for it.
+
+> p78 | Apparently no sniffle gear because you'll overheat and we'll make sure you get an article 15 so obviously we had three casualties from fainting
+> p18 | I'm breaking uniform code now I don't care extra T-shirt shorts PT long pants underneath
++ p23 p27
+
+?? What's the one thing you'd change about how they run it?
+
+Let trainees have the same thermals the drill sergeants are wearing. I wrote a whole promise to myself about it and I meant it.
+
+> p27 | When I'm an officer if I ever come across trainees and short sleeves, sitting down on cold cement during a snowy January I'll ensure they can use the same thermals the drill sergeants have literally any day.
+
+?? Was there ever a day you weren't cold?
+
+February 19th. First day in all of basic where I didn't shiver. Cloudy until 1 PM, then it opened up, and it was the day a drill sergeant told me I'd make a great infantry officer. I wrote that I felt happy and witty. Not a coincidence.
+
+> p72 | Today was the first day of all basic where I did not shiver.
++ p80
+
+## cat=Food and hunger
+
+?? Were you hungry the whole time?
+
+Yes. I lost about 20 pounds and got down to a 20.2 BMI, which is barely over the 20 you need to qualify for double rations. I got the double rations in March, five weeks after I started asking.
+
+A representative breakfast: one slice of white bread, a piece of grilled chicken the size of a nugget, an orange, a Nutri-Grain bar, and an ashtray amount of eggs. One dinner was a chicken nugget, four leaves of shredded lettuce, and an apple.
+
+> p13 | I'm starving and losing so much weight for breakfast. It was good one slice of white bread grilled chicken the size of a nugget in orange a Nutri-Grain bar and an ashtray amount of eggs.
+> p34 | the least calorie dense dinner yet consisting of a chicken nugget four leaves of shredded lettuce and an apple
+> p48 | I'm at 20.2 I need 20 BMI to qualify for double rations
++ p87
+
+?? What does hunger do to you mentally?
+
+It flattens you into an animal. Between the hunger and standing in the cold for hours you can't hold a thought — you just cycle through urges.
+
+I grew up with sleep for dinner, so hunger wasn't new to me. Starving people is still the most effective way I've seen to break someone.
+
+> p46 | starvation really is the best trick to breaking someone mentally
+> p46 | you can hardly form coherent thoughts just reflections of urges I want food I need to pee. It's cold. I miss Home.
+
+?? What food did you miss most?
+
+I kept lists. Fuddruckers, Big Macs, Brothers Pizza, Reuben sandwiches, latkes, coffee, tiramisu, Domino's thin crust with pineapple and jalapeño, Sonic, Belgian waffles, vanilla peanut butter, and a lasagna calzone I'm fairly sure doesn't exist yet.
+
+> p28 | Things I miss/want when I'm home Fuddruckers big Mac Black ops two red dead redemption, two modern warfare, two brothers pizza, movies LED lights
+> p80 | I wanted to see if someone invented vanilla peanut butter or a lasagna calzone.
++ p31 p46
+
+?? What was the deal with the coffee?
+
+Coffee was currency. I smuggled grounds, hid a stash in a false envelope, and made cups with three sugar one cream that tasted like water and immediately made me shit. It was still the highlight of the week.
+
+I larped as a prison drug dealer with a coffee packet. The other PG admired my smuggling skills. Arthur and I once made ice cream out of crushed ice, sugar, cream, coffee and chocolate protein mix in a serving tin.
+
+> p56 | My secret coffee stash was untouched, but is now concealed in a false envelope
+> p58 | had fun Larping as a prison drug dealer with a coffee packet
+> p61 | Arthur and I tried making ice cream. We use crushed ice sugar, cream, coffee, chocolate protein mix and mix it in a serving 10
++ p41 p54
+
+?? Did people share food?
+
+All the time, and it was the whole economy. My Nepalese bunkmate gave me his French toast. Gagnon and IM gave me theirs. Lopez gave me bread because I gave him my broken watch. Karagach gave me an apple I ate in the bathroom. Hakeme, Henderson, Bruno, Harris, Hinojosa, Emery — everyone slid me something at some point.
+
+I gave it back out too. Guevarra got an apple, Max got bread, and at the Forge Herman and I gave our extra food away.
+
+> p26 | my favorite Nepal bunk mate gave me his French toast to express my gratitude. I told him it's OK if he falls asleep on firewatch
+> p60 | car key gifted me an apple which I eat in the bathroom.
++ p50 p71 p90
+
+?? What did you learn about yourself from being hungry?
+
+That I can be bought cheap, and that it bothers me a lot.
+
+> p60 | Knowing I could be bought for one Chick-fil-A six dollar sandwich is not ideal.
+> p60 | Food truly is a quick ticket to purchasing my passionate loyalty
++ p63
+
+?? What happened when you finally got to eat a lot?
+
+I hurt myself. Days of starvation gave me eyes bigger than my stomach and I shovelled thousands of calories in as fast as I could and then paid for it.
+
+> p63 | My gluttonous ambition has left me in pain and once again I only have myself default.
+> p63 | I've forgotten a full stomach is like most things. It's a golden ratio. This bloat consumes me from the inside out.
+
+## cat=The body
+
+?? How much sleep did you get?
+
+Five hours on a good night, less with fire guard. Wake up was usually 0430 to 0500, sometimes 0315. During reception it was worse than that — 40 hours awake before we got 40 minutes down.
+
+Early on I was falling asleep standing up. Eyes closing, body pitching forward, every few minutes.
+
+> p3 | I've been nearly fainting every few minutes generally, my eyes close my body falls forward.
+> p46 | It keeps everyone up when we have five hours of sleep before 5 miles overnight camping where we sleep in a hole that we dig
++ p9 p84
+
+?? What was fire guard like?
+
+Not a bad gig, honestly. Up in the dark with a red headlamp, sweeping a floor that has nothing on it, waking the next guy in ten minutes. It was the only real privacy I had, so most of the long philosophical entries in here were written on fire guard.
+
+The report you have to give is burned into my head.
+
+> p9 | Good morning Sergeant this is a trainee joudrie from Delta company second bay we have 57 trainees assigned in 57 trainees present.
+> p9 | Waking up the other guy in 10 minutes low-key it's not a bad gig.
++ p37 p60
+
+?? How sick did you get?
+
+Very. It went from sniffles to a fever, then pneumonia went through the whole bay along with strep throat. I collapsed on my mat next to my locker securing gear with a fever and told nobody. Bloody mustard mucus for days. Everybody was sick.
+
+> p23 | my cold has metastasized from sniffles into a fever and a nose that will not stop running enough to fill a mason jar
+> p23 | I collapsed on my mat besides my locker while securing my gear, but I told no one
+> p30 | second platoon's morning, began with a caffeine of heaves and coughs as pneumonia has struck the barracks.
++ p35 p31
+
+?? Did you get injured?
+
+Nothing that stopped me. A tight Achilles nearly crippled me one morning — the pain shot from my leg to my knee to my eye and I ended up on a knee punching frozen dirt. My arm bruised yellow and purple all down from blood draws. My hand swelled up purple during an assembly for no reason I ever figured out. Nerve damage in the hands and toes by the end, and a toe that went white and numb.
+
+> p24 | after sprint immediately, the pain shot up my leg my knee into my eye, as if I was struck by both of lightning when it happened I found myself on the knee, punching the frozen dirt
+> p22 | My hand started to swell up, turning almost purple they cannot even close.
++ p11 p77
+
+?? Did you get in better shape?
+
+Yes, measurably. First AFT deadlift was 150. By February 13th I was at 200, and by the March 2nd AFT I hit 220 and maxed the plank. Two mile went from 16 minutes to 15:41. Sprint drag carry 2:02.
+
+My goal was to max the entire test within a year of that entry.
+
+> p62 | I listed 200 dead lift up from one 5035 hand release from 27. I maxed out the plank again
+> p84 | my dead lift was 220 way better than my first AFT at 1:50
++ p17 p32
+
+?? What was the running like?
+
+Better than I expected. I ran an 8:40 mile in 16 degree weather early on, a 7:40 later, and by March I had my first runner's high on a two mile and wanted to keep going. I raced Kent, the fastest guy there, on sprint intervals and kept up.
+
+Shins felt like they were going to explode more than once.
+
+> p86 | We ran 2 miles. I love the pack maybe had my first runners high I was so excited to sprint to the finish
+> p20 | My shins felt like they were going to explode
++ p88 p31
+
+## cat=The people
+
+?? Who were your best friends there?
+
+Arthur (Karagach), Herman, Libby, and Merritt. Different guys for different parts of my brain.
+
+Arthur is street smart, boisterous, endlessly curious — post-Soviet architecture, zombies, fungi, business, hacking ethics. He reminds me of JJ. Herman is the academic one, an EMT, a Calvinist, writing his own sci-fi book. Libby is an eleven year fireman with a wife and kids who I talked heaven and business with. Merritt is the funniest human there.
+
+> p75 | I feel very connected to Arthur Herman Libby and Merritt. they're all super great
+> p88 | Merritt is maybe my favorite guy here him and I shot the shit for hours
+> p23 | Harmon is more of an academic and Arthur is more street smart and boisterous.
+
+?? What did you actually talk about all day?
+
+Everything, in one to five minute windows. Chinese foreign policy, the Strait of Hormuz, the Islamic golden age, drone warfare, Ukraine, war crimes, Geneva Convention, Reaganomics, Crusader Kings, the Voynich manuscript, color theory, determinism versus free will, heaven, Presbyterianism versus Catholicism, the double slit experiment, music theory, DMT, Serbo-Croatian on Wikipedia, old flash games, and hamsters always dying untimely deaths.
+
+> p53 | we talked about zombies post Soviet architecture, fungi ants, business mechanics, geospatial, imaging, futures, trauma businesses, and it made me very thankful to have him here.
+> p53 | 16 hours of standing quietly interrupted by one to five minutes of cool conversation.
++ p23 p39 p76
+
+?? Who was Hubbard?
+
+The kid the whole company turned into a punching bag, and the person this journal is most about besides me.
+
+He couldn't get his uniform right, kept flagging people with his rifle, kept failing to qualify, kept getting the whole platoon smoked. Drill sergeants bullied him. I made myself his battle buddy on day one of that and stayed it. I made his bed. I promised him he'd pass. I told Arthur to lay off him. I gave him my phone number as a job reference and taught him how to talk to AI.
+
+In February he wrote a note about suicidal ideation and went on watch — lost his pens and shoelaces. He got sent home in March. I was the first person to shake his hand and hug him goodbye, and he thanked me.
+
+> p10 | I stopped him on the way out to be his battle buddy. Promise him he'll pass. I'll make sure I made his bed for him
+> p62 | he wrote a note and left it open talking about Some form of suicidal ideation so he's on suicide watch
+> p97 | I was the first person to shake. His hand gave him a hug he thanked me deeply for everything
++ p50 p71 p102
+
+?? Who was Lopez and what happened with him?
+
+The platoon's problem child — kicked out of two platoons for anger issues, on his last strike. He threatened Herman over an argument about people stealing from the arms room, and I physically pulled him away.
+
+Then when Kaltrider and Herman went to report him, I was the SHARP rep, so I was in the middle. I got Lopez, coached him on exactly what to say, told him to say "drill sergeant" and accept whatever they said. It came out as nothing more than an argument. He didn't get kicked out of the army — and I later found out he has a kid.
+
+After that he listened to me. That was the day I understood how much influence I actually had.
+
+> p52 | Lopez got angry. he's been kicked out of two platoons for anger issues and threatened Herman. I stopped writing ripped Lopez away
+> p55 | I ran inside, and the click he was a part of was initially hesitant, but I lowered Lopez up. I told him what to say.
++ p76 p100
+
+?? What were the drill sergeants like?
+
+Competent, and I liked them more than I expected. Ours were Warring, Madden and Dupree — I noticed the first syllables are war and mad. Mine looked like the smart guy in Idiocracy with a faint Matthew McConaughey accent.
+
+Best line any of them gave: "if you're going to die, do it in the morning."
+
+Madden told me I'd make a great infantry officer. Dupree let me keep colored pencils he should have confiscated. Kramer asked what platoon I was from and said how come I've never seen you before, which for me was the highest compliment available.
+
+> p15 | "if you're going to die, do it in the morning" drill, sergeant
+> p9 | our drill. Sergeant looks like the smart guy in Idiocracy and has the faintest accent like Matthew McConaughey or Owen Wilson
+> p73 | He said what platoon are you from? I said second he said how come I've never seen you before
++ p72 p63
+
+?? Did you feel like you fit in?
+
+Not for a long time. I was 25 in a platoon full of 18 year olds who thought I was a quiet kid. I called myself a black sheep in reception and meant it.
+
+That inverted completely. By February people were gravitating to me so hard I couldn't get five minutes to write with earplugs in. Somehow I was simultaneously invisible to the drill sergeants and popular with everyone else.
+
+> p4 | I feel like a black sheep, not that it matters, but it's so strange to think these people see me as a quiet kid, but I'm 25.
+> p56 | the point of invisibility I have is quite unique where drill sergeants almost completely ignore me, but I'm quite popular
+> p89 | a lot of people gravitate towards me. They like me, but legit even when I have earplugs in and I'm trying to write people interrupt me.
+
+?? What annoyed you most about the other trainees?
+
+Yelling after lights out when we had five hours before a five mile ruck. I could take being beaten, frozen, starved and bullied. I could not take somebody calling themselves my buddy and keeping me awake for no reason.
+
+Also: stealing from the arms room in front of everybody the same morning they announced a bag check, and costing 250 people their phone time over an apple.
+
+> p46 | Beat me freeze me starve me bully me that's whatever but anyone who claims to be a pal and keeps me up at night screaming while I try to sleep for no reason before a big day is not really my buddy
+> p69 | They could either have an apple or take away time for 250 people's families just like Adam and Eve they fucked around and found out once they chose the apple
++ p4 p52 p68
+
+?? Did you make friendships that lasted?
+
+That was the plan. I collected everyone's numbers on a page in the back of the book to start a group chat after basic, not even to be active — just so everybody has everybody.
+
+Arthur, Merritt and Reed all go to AIT in Arizona together and I'll be there right after they leave, which gave me genuine FOMO.
+
+> p88 | I'm locked in for these guys for life
+> p10 | I wanna make a group chat after basic not even to be active just so everyone can have each other's number
++ p93 p103
+
+?? Was there any real conflict between people?
+
+Yes, and it came in one wave in early February once boredom set in. Cliques formed and hardened. Lopez threatened Herman. Trainees stole from the arms room. Somebody insulted a platoon guide to her face. Third platoon got their lockers destroyed for smuggling MREs.
+
+I wrote a passage about the Black trainees in my platoon getting us in trouble that I was uncomfortable writing at the time and I've left it in this book as I wrote it. It's on the Idle hands page.
+
+> p52 | maybe it's the mundane of the day but clicks have started to appear and are now reinforced I knew something was coming
+> p52 | I feel really bad saying that but I guess like I understand I'm not angry at them.
+
+?? What happened with the guy who tried to kill himself?
+
+I watched him get tackled. It happened in front of me during reception, and it happened again — I wrote in one entry about watching Wen try to stab his own neck in front of me. That was in my first five days.
+
+Two other people died at Fort Jackson that same week. I only heard about them in passing.
+
+> p3 | I saw a kid try to kill himself in front of me before he got tackled
+> p6 | hearing in passing about the two people who died the same week here and watching Wen try to stab his neck in front of me
++ p10 p11
+
+## cat=Sarah, home, and missing people
+
+?? How bad was missing your girlfriend?
+
+Physical. I described it as a weight in my chest dragging me to the bottom of the ocean, and said it literally hurt my body.
+
+Almost every early entry is addressed to her. I called her Pookie. I'd spend all day composing poetic ways to tell her she's beautiful while marching, and then have two to seven minutes at the end of the day to actually write, too worn out to do it properly.
+
+> p4 | This literally hurts my body how much I need you. I always knew I was lucky and that I would miss you, but it's like a weight in my chest.
+> p14 | I think about poetic ways to tell you how meaningful and beautiful you are and amazing and special while I'm marching, but my body is so worn out the final 2 to 7 minutes I have to write.
++ p13 p3
+
+?? How often did you get to call home?
+
+Almost never at first, and it was the single thing I thought about most. Fifteen minutes on a Sunday if the platoon behaved. I once got my phone for less than 45 seconds. Weeks went by where a drill sergeant would say I'd get it after this thing, then forget and disappear.
+
+Girls ruined phone time for a week once. Guys smuggling MRE parts ruined it another time.
+
+> p19 | Got my phone for less than 45 seconds
+> p29 | hearing your voice reinvigorated me
++ p10 p18 p68
+
+?? What did letters mean to you?
+
+Everything, and I never got enough. I decided to open one letter a day and give each its own page to respond. I got some from Sarah and a couple from my dad. There were long stretches where I wrote "still no mail for me" and just left it there.
+
+> p30 | I decided to open a letter each day to respond, give it its own page to do so
+> p75 | how I wish someone would write me.
++ p95 p62
+
+?? Were you worried about the relationship?
+
+Yes, honestly. Not about her — about what I'm asking of her. Eighteen months of OCS, six months of AIT, nine to thirteen months of deployment, possible relocation. I wrote that I didn't want to prevent her from doing what she wants, and that I can't expect her to just follow me because she has a life too.
+
+I also wrote that I'm ready to settle down with her.
+
+> p49 | I'm ready to settle down and with Sarah don't tell her I said this, but I'm really worried about having to travel for work once a month is fine of course but a 9 to 13 month deployment
+> p72 | scared of how the distance will impact my relationship
+
+?? What did you miss besides people and food?
+
+Clouds and birds, mostly. I got genuinely envious of birds because they could fly anywhere. I teared up once because I couldn't even watch the clouds pass or an ant crawl while standing at attention.
+
+Music, too. I hadn't heard a song in so long that the ones I thought I knew went hazy.
+
+> p23 | I miss a lot of things like food sitting, but especially clouds and birds
+> p7 | I teared up about the fact, I could not even watch the clouds pass
+> p14 | I've not heard a song in so long the ones I thought I knew I realize they're getting hazy.
+
+?? What did you miss out on while you were gone?
+
+I turned it into a song. My hometown team in the Super Bowl, a concert, a New Year's Eve Airbnb, Mikey's funeral, my anniversary on Valentine's Day.
+
+> p57 | I missed Mikey's funeral our anniversary on Valentine's Day. I wish I could talk to you again, what haven't I missed
+> p57 | dandelions on sidewalk cracks reunions dressed in black hell I miss my own funeral.
+
+?? Did you feel forgotten?
+
+Some days badly. I wrote that I was sad more people didn't seem to care that I was gone, and that I felt like a has-been who never got to be. That was the night I cried in the shower.
+
+> p42 | I'm sad more people don't care that I'm gone. I feel like such a has been, but I never got to even be
++ p76 p101
+
+## cat=My mom
+
+?? What did you think about your mom while you were there?
+
+Constantly. She's in the dreams, the songs, the crying, the reason I joined and the reason I almost didn't.
+
+> p15 | I wish my mom could see me graduate if she was alive. I probably would not have signed up.
+> p7 | after getting yelled at to ciao Hall exercise only thing that bothered me was losing my mom.
+
+?? Did you write anything about her?
+
+Yes. A song, on the page right after the first AFT.
+
+> p33 | Mama, I joined the army. You always said I look good in green mama.
+> p33 | I wanted to travel like you. I'm going to Baghdad soon, mama I joined the army. I wonder what you'd say
+
+?? What was the dream about her?
+
+I was with her and we watched a small fender bender happen to a stranger. What broke my heart is that my brain rendered her as mentally distant, weak and slightly incompetent — the version of her at the end, not the version she was.
+
+I wrote that I want to open a blog on her next anniversary so people can gather memories of her, so my kids will know what she was.
+
+> p16 | regrettably I remembered her as mentally distant a bit weak and slightly incompetent saying that breaks my heart. I wish I could remember her in her better days.
+> p16 | maybe in the next anniversary I'll open a blog or something for everyone to gather memories so she's not forgotten
+
+?? What do you regret about her?
+
+Being an asshole teenager for half my life and not being thankful for her while she was here. I cried about that on a lot of days there. In confession I admitted I was angry at God for taking her so soon, and the priest reminded me I can still live for her.
+
+I also wrote the hardest line in the book about it: I wasted my youth and my mother's twilight years on underage drinking and Snapchat stories.
+
+> p56 | I cried so many days here how sorry I wasn't thankful for her being such a good mom and I felt bad for Me being such an asshole teenager for half my life
+> p82 | I wasted my youth and my mother's twilight years for underage drinking in Snapchat stories.
++ p83
+
+?? Was she why you joined?
+
+Partly, and in a complicated way. I was her little trooper my whole life, thugging things out. But I also wrote plainly that if she were alive I probably wouldn't have signed up.
+
+Being her son is also where the legacy thing comes from — wanting my future kids and their kids to have stability and a name that means something.
+
+> p25 | my whole life I had been my mom's little trooper, thugging it out through a lot
+> p25 | I want my future kids to know stability and their kids too.
+
+## cat=Faith
+
+?? Did basic change your faith?
+
+It deepened it and complicated it at the same time. I went to Mass, got a Bible, read Romans and Revelation in a foxhole, and eventually went to confession for the first time in a long time and cried through it.
+
+But I also drifted further from a lot of Christians there. When Herman argued the earth is 6000 years old I found myself pushed away from the label even as I got closer to God.
+
+> p30 | I knew I carried heretical beliefs, but it almost pushes me further from Christianity
+> p30 | I believe studying the world God made brings us closer to him
++ p83 p91
+
+?? What happened at confession?
+
+The best hour of the whole three months. I told him how good I am at lying to myself to justify stealing, lust, jealousy, alcohol, drugs, how bad I am at counting my blessings, and that I was angry that God took my mother so soon.
+
+He didn't hand-wave me with a few Hail Marys. He listened. He was the mentor I'd been writing about wanting for weeks.
+
+> p83 | he listened he felt he reflected he was that Menter I craved so bad
+> p83 | I was reminded I could still live for her, even though I won't be able to count every blessing there's always blessings to be count
+
+?? What do you think heaven is?
+
+Not a place. Libby imagines somewhere huge and bright with abundant nature. Mine is less physical than that — a oneness, connected to God, that feels like something I once felt mutually with my mother.
+
+I also wonder what shape it is, which I know is a strange thing to wonder about.
+
+> p51 | I believe it's not physical. Our bodies tempos with sin and I feel like there would be only this pure one this oneness surrounded embraced, connected to God
+> p38 | I wonder what shape heaven is I actually wonder a lot about that
+
+?? What's your weirdest theological idea from in there?
+
+Two of them. First, that being intelligent might actually be a spiritual disadvantage — the people smart enough to question God are the same people who build indoor plumbing and human rights declarations for everybody else, and they're the ones most likely to lose their faith over it.
+
+Second, that Adam and Eve eating the apple and realizing they were naked maps onto early humans eating psilocybin and developing self-perception separate from nature. Maybe consciousness itself is the original sin.
+
+> p38 | The people who are smart enough to question and reject God, smart, and quotation marks Reject. God are the same people who make life easier for the disabled
+> p76 | perhaps consciousness itself is the original sin or perhaps nothing at all
++ p37
+
+?? Do you believe in free will?
+
+I go back and forth and it never resolves. Herman and I reluctantly rejected free will in favor of determinism in one conversation in January — that's how I found out he's a Calvinist. But I also wrote about realizing I have the free will to pursue my life the way birds fly anywhere.
+
+Addiction is what makes me doubt it most.
+
+> p22 | Herman and I had a conversation where we reluctantly rejected the notion of free will in favor of the determinism.
+> p74 | Addictive like nicotine had me by the throat for a time so much so I question free will and how it relates to an addiction
++ p27
+
+?? What's the hell question you kept coming back to?
+
+Whether it's empty. I want it to be. I know I carry hate for my fellow man sometimes and I want to learn to forgive people who betrayed me, but that's much harder than it looks.
+
+> p38 | I really hope hell is empty or nearly empty in Jesus. Message of radical forgiveness is maintained.
+
+?? Did you keep Lent?
+
+I tried and I failed immediately. I ate a beef stick out of an MRE on the very first Friday of Lent without even noticing until it was gone, and it wrecked me — not because of the meat, but because of how completely hunger blinded me.
+
+Later a drill sergeant refused me the vegetarian option and told me I don't get to pick my religion. I wrote a polite letter to the chaplain about it. I wasn't angry, I just thought he could learn.
+
+> p73 | I realize I eat the beef stick breaking my meat fast on the very first Friday of lent.
+> p74 | I have these deep rooted emotions, opinions, and instincts, but was blinded by a piece of beef jerky.
+> p80 | He said I do not get to pick my religion because I asked for the vegetarian option.
+
+## cat=The training
+
+?? What was the gas chamber like?
+
+Easier than advertised and then much worse. Twenty of us in a one room cabin with a guy dressed like Darth Vader calling out commands. The first two seconds after taking the mask off were nothing and I thought I might be immune. Then it crept into my throat and the sides of my eyes.
+
+I walked out like I was sober while people coughed, cried and vomited around me. There was a camera crew. The real burn hit outside in the fresh air. Once it cleared I felt incredibly motivated, mostly because my sinuses were finally open.
+
+> p34 | The first two seconds was nothing. I thought I could be immune then creeped into our throat and sides of our eyes
+> p34 | I heard people, cough, crying and vomit, but I walked out like I was sober.
+
+?? What about Victory Tower?
+
+Nervous going in, mostly because Gibson kept telling stories about a guy he knew who fell, hit his head and ended up 100% disabled. The corporal handed me a broken harness and called me a retard for it, then gave instructions that confused everyone.
+
+The 40 foot wall itself went fine. I took small jumps and was hugely relieved when I touched down.
+
+> p31 | I was a bit nervous but it went all right. I took small jumps but was super relieved. When I touched down
+
+?? How did you do on the obstacle course?
+
+Best in the company. 220 people. I led my group, helped everyone finish, and I wrote that I felt peak — jumping, crawling, climbing. It got me escorted to the SHARP meeting in a heated car with music, which was the first taste I got of what being an officer might feel like.
+
+The second obstacle course in February was half frozen and I went beast mode on that one too.
+
+> p34 | I did the best out of the entire company which is 220 people
+> p34 | Honestly, I got a taste of being an officer and motivated me to never settle.
++ p43
+
+?? How did you shoot?
+
+Well, and it took a while to prove it. Day one I built the house and my groupings were good enough that the drill sergeant wanted to show my target to the battalion commander, a former Green Beret.
+
+Then qualification humbled me — 19 out of 40 twice, because I couldn't see the 300 meter and was shooting high. Third attempt I jumped to 29. On February 12th I hit 27 of 29 available targets on a broken lane, which with the two dead targets is effectively expert.
+
+I also got pulled up to teach the class the correct form.
+
+> p50 | My groupings were so good real Sergeant when he checked the targets After Every five told me to show the battalion commander who is a former Green Beret
+> p61 | I hit 27 out of the 29 targets so with that hundred percent accuracy I should qualify as an expert.
++ p56 p59 p73
+
+?? What was the Hammer?
+
+The first field exercise, and it was an anticlimax. We prepped for a 4 AM to 2 PM hike and turned around after a mile or two — I think the ground was too frozen to sleep in. Even the drill sergeants seemed confused, and afterward they thought it was bullshit.
+
+The good part was learning actual movements. I was squad leader for the column, staggered column, wedge, react to contact. That's the first time I felt badass and in the zone.
+
+> p47 | I felt bad ass and I was in the zone.
+> p47 | I think the ground was too frozen to allow us to sleep there overnight once we got back the drill. Sergeant thought it was bullshit.
+
+?? What was the Anvil?
+
+Three days in the field in the cold, and the best part of basic. Drill Sergeant Spencer moved me off Arthur and onto Herman for no reason I ever learned, which I decided was divine intervention because Herman and I made a hell of a team.
+
+We dug the first hole and the best one — tarp method, verticality, blending, best sticks. A lieutenant photographed it. I did a sector sketch the company commander took a picture of. Madden liked our foxhole. At dawn on the last day the enemy assault came, my weapon jammed, I dove into the reserve hole, tossed lemon my spare mag and told him to shoot anything that moves.
+
+> p78 | Herman and I made a kick ass team to our Fox was cozy hidden because we use the tarp method
+> p79 | tossed lemon, my spare mag and told him to shoot anything that fucking moves
++ p77
+
+?? What was the Forge?
+
+Four days, and the final requirement to become a soldier. Mission was defending Belesia from Alvania. A 60 pound ruck and 11+ miles on day one, and I was uncharacteristically exhausted by mile two.
+
+We had the perfect squad — me, Herman, Halsey and Arthur. Spencer let us dig independently. I did most of the digging, kicked down trees Bear Grylls style, built Arthur and Halsey's fort, hauled two tarps of pine straw for Libby and Lois.
+
+Night infiltration course was the coolest thing I did there: crawling under wire with live fire overhead. Gilpatrick said let's get ready to kill some crowds.
+
+The last ruck was 12 miles somehow all uphill at about a 14 minute pace. They walked us in through torches playing Linkin Park and I almost teared up, then we stood around waiting for the company commander and the vibe was ruined.
+
+> p90 | that rock was evil especially since we did not know the destination and ended up walking 11+ miles
+> p91 | We heard go go go and we crawled under wire live gun fire, the flyers it was exhausting.
+> p92 | The rock was 12 miles somehow all uphill it was evil hard I was jogging.
++ p89
+
+?? Was the victory breakfast worth it?
+
+No. We were promised pizza, coffee and ice cream and dreamed about it for days. It was a lie. I got French toast, eggs, grits, veggie sausage, raisin bran, a strawberry Pop-Tart, cookies and fruit — fine, but only 15 minutes, and nobody finished.
+
+> p92 | we dreamed for days of pizza, coffee, and ice cream as promised but unfortunately, that was a lie but OK breakfast nonetheless
+
+?? What was the grenade training like?
+
+Almost too easy, which took the coolness out of it. Grip, thumb clip, twist, pull pin, peek, strike, pose, frag out, duck. Safety was extremely strict right up until a drill sergeant stood in a crowd of us, pulled a pin, threw it in the air and had us run away.
+
+Later at buddy team live fire my grenade fell apart like Legos and never detonated.
+
+> p85 | I was a quick learner so much so it was less exciting
+> p86 | my grenade malfunction falling apart like Legos and then not detonating
+
+?? How did land navigation go?
+
+Badly as a team, great personally. Two out of five points. Arthur and Halsey argued, our team leader stumbled, and one guy insisted he knew what to do and then refused to help. I kept the pace count, took the map and found both points myself.
+
+But the day itself was gorgeous — orange pine needles, lime faded moss, walking through what felt like different biomes. I wrecked through swamps like a juggernaut and was happy the whole time.
+
+> p80 | I saw orange pine needles I saw lime faded moss. The world glistened
+> p80 | I kept the pace count. I took the map and found the two points myself.
+
+?? What was the most boring day?
+
+Sixteen hours at the range with zero shots fired. Hot A's for breakfast, lunch and dinner. Standing and waiting while 54 other people qualified.
+
+The other contender is twelve straight hours cleaning weapons in March, chasing what I called infinite ghost carbon, where nobody passed inspection for the first ten hours.
+
+> p53 | Today was another rock kicking simulator at the range 16 hour day zero shots fired.
+> p93 | It was a yuck ass day a genuine 12 hour weapon cleaning time both the easiest and the hardest day. There was just infinite ghost carbon
++ p68 p67
+
+## cat=Leadership and power
+
+?? What jobs did you end up with?
+
+SHARP representative first, which I interviewed for and got at the end of January. Then platoon guide in early February, which more or less fell into my lap after my shooting.
+
+The SHARP thing has a reputation as a narc position and it isn't. It's closer to a quasi-chaplain role — the officers created it so problems get solved at the trainee level without paperwork.
+
+> p34 | I found out I got the sharp job
+> p50 | so based on my shots, I'm officially officially PG.
+> p71 | I talked about sharp being perceived as a narc position when it's not, and it actually kind of evolves into a quasi, chaplain role
++ p44
+
+?? What did you learn about power?
+
+That it runs on favors and mercy, not authority. I wrote a whole entry about it in a deliberately dramatic style — the barbarians, the nobles, the scholars and the priests of the platoon all under my influence through favors that grew into dependence.
+
+The key move was making it known that I'm not a snitch. Once that was established, everything else followed. Bay boss needed my Tylenol. The other PG admired my coffee smuggling. Lopez was bribing me with food.
+
+> p55 | I've made my mercy known and it's a parent that I'm no snitch and they feel fortunate
+> p55 | everything I said here is true. I tried writing like a dramatic asshole. I promise this is no big deal.
+
+?? Did you like being in charge?
+
+Yes, more than I expected, and it clarified what I want. I wrote early that I'd keep my head down and then decided I might run the bay instead. I called a meeting, gathered people, linked up with the bay boss, asked why we weren't locked in.
+
+By the Forge I felt like God put me there to help people chase things I can't have myself.
+
+> p23 | I felt fired up led the meeting linked up in a friend of the bay boss whose name is frisbee
+> p80 | I felt like God put me here to help other people to follow their dreams, guarding others to treasure I cannot possess.
+
+?? How do you feel about authority?
+
+Love-hate, and I wrote about it more than once. I follow my drill sergeants because they've seen things and they're shaping us. But plenty of people power trip, make bad calls, and never explain their reasoning, and hierarchies only work with the consent of both classes.
+
+Morality and rules don't always line up for me. That's why I could be the SHARP rep and still turn a blind eye to contraband.
+
+> p36 | some people demand power without justifying it. I listen to my drill sergeant because they have seen shit and help shape us but so many people power trip or make bad calls.
+> p36 | to Me morality and rules do not always line up perfectly
+
+?? What do you think about institutions generally?
+
+That they all aim too low. Every organization is essentially for-profit in some way and never quite pure.
+
+> p27 | I wish Schools taught how to genuinely educate prisons to reform army to protect, but everything feels needlessly constricting
+
+?? What was the moment you felt most like an officer?
+
+Two of them. Being escorted from the obstacle course in a heated car with music to the SHARP meeting. And the polygraph detail in March, in a building with FBI, CIA, ATF and OCS logos on the wall, sitting in a warm comfy chair, feeling for the first time in a long while like I was in a room where I belonged.
+
+> p94 | it felt appropriate to be in that building with a blended prestige intelligence without having pretentious or being unapproachable.
++ p34 p98
+
+## cat=Inside my head
+
+?? What did you think about for sixteen hours a day?
+
+Everything. I kept lists of it. Pokémon designs I saw in clouds, my sci-fi book, radio waves and the speed of light, whether entropy is the point of life, air pressure systems, botany, ornithology, Saint Augustine, the double slit experiment, what sport they'd play on another planet, and whether being mean in video game voice chat is a healthy outlet or just practice at being mean.
+
+> p86 | I thought about how much I love Sundays and will maintain the Sabbath even after basic
+> p84 | I wondered like being mean in video game voice chats like smack talk. Is that an outlet for frustration that's healthy or is that strengthening my meanness
+
+?? Do you think you have OCD?
+
+Herman was near certain, and he has it. I'm inclined to agree, mostly because of the nonstop train of thought I'd always chalked up to ADHD, and because my brain has spent years just repeating the phrase your mom is dead.
+
+I never had the classic compulsions, but from third to tenth grade I was vegetarian and so afraid of germs that I tracked every person and every object they touched all day, and wouldn't borrow a pencil. That ended the day I got high, got hungry, and ate a McDonald's chicken nugget.
+
+> p41 | for years, my brain just has been repeating The phrase. Your mom is dead or other trauma, which maybe that's PTSD.
+> p41 | in 10th grade I hate a joint got hungry eat McDonald's chicken nugget cured instantly through sheer will alone
++ p28 p37
+
+?? How much did you cry?
+
+More than I've ever admitted anywhere else. In the shower on the first day of hot water. In church with tears pouring down my face while I controlled my breathing so only the guy next to me noticed. In the shower again on February 2nd until snot came out and I could finally breathe. In confession.
+
+Most of it was about my mom.
+
+> p14 | We finally have hot water took my first shower and silently cried there again.
+> p42 | I cried snot came out. I can finally breathe. I might go back to cry to be honest.
++ p10 p43 p83
+
+?? What did you dream about?
+
+Vividly and constantly, and I logged them. Falling into a pool with no ladder while bugs got bigger. Tony Soprano as my dad with my whole platoon at his house. An airsoft match where I bled out watching my own reflection in a puddle. Convincing Ryan Gosling to invest in jalapeño slider buns. Building a Minecraft shelter with Arthur and finding a baby bear in it. Checking out Diary of a Wimpy Kid books from my childhood library.
+
+Notably I did not dream about Sarah when I wanted to, and in my dreams I forgot I had a job, a house, a girlfriend.
+
+> p39 | I was the last man standing, tried rushing for rifle on the ground, only for a knife plate to slice my neck
+> p74 | I forget I have a job a house a girlfriend. I know it's a dream but it's like those things never crossed my mind
++ p9 p22 p29 p78 p82
+
+?? What's the thing you're most afraid of?
+
+Being forgotten, and being boring. Those are the same fear for me.
+
+I've been documenting my life obsessively since I was a kid — I used to ask my mom to remember every cloud I found beautiful because that one would never exist again. A quarter million photos from 2021 to 2025. This journal. I know I'll die and be forgotten and I can't make peace with it.
+
+> p30 | I used to ask my mom to remember every cloud I found beautiful or even a shape of a popcorn because that would be the only one like that
+> p65 | I think the worst insult I could ever be called is boring
++ p62
+
+?? Did you feel like you were getting worse as a person?
+
+Early on, yes. In reception I wrote that it felt like the place was making me a worse person, and that I hated a lot of people there, which is unlike me.
+
+Later it flipped into something more specific — a growing distaste for weakness and incompetence, and less patience for naivety. I'm not sure that's an improvement.
+
+> p3 | it still feels like it's making me a worse person
+> p86 | I pondered how I have a increasingly distaste for weakness. How naive at a certain point is not charming.
++ p69
+
+?? What's your honest self-assessment from in there?
+
+That I'm useful to everybody and no use to myself. People come to me for emotional, philosophical, practical and comedic things and I can always help them, and I'm still the poorest, hungriest, skinniest guy in the room.
+
+I also think being adaptable to everyone has cost me — jack of all trades, master of none, which I suspect is why I've never felt settled in a career.
+
+> p37 | I'm always able to help them, but why can I not help myself? Why am I always the poorest hungriest and skinniest person among my peers
+> p7 | Here I feel lost in life mostly because a jack of all trades yet a master of none
++ p76
+
+?? Were you lonely?
+
+Yes, in a specific way. Not friendless — I had great friends there. Lonely in the sense that nobody there had all my sides, and I couldn't be fully vulnerable with anybody.
+
+> p76 | I wish someone would magically understand some of the pain I carried to be truly truly vulnerable with someone
+> p70 | I don't think anyone will get to know all my sides
++ p27 p101
+
+?? What did you think about death?
+
+That it isn't beautiful. I watched a body get wheeled out and there was nothing romantic about it — no final stand, no quote, just a body giving out. It scared me, and it made me think life is sacred precisely because it isn't permanent.
+
+I compared it to a cherry blossom, which spends everything it has on one burst of petals as it dies. People don't get that.
+
+> p11 | There's no romanticized gestures. Final stands quotes just a body give out.
+> p11 | I just think about how some cherry blossoms when they begin to die it uses all this energy and a burst of petals.
++ p6 p82
+
+## cat=The funny stuff
+
+?? Was any of it funny?
+
+A lot of it, once the first two weeks passed. The barracks got genuinely funny. My face felt warm from laughing on the first Sunday, and by March, Arthur and I were wrestling every minute of freedom we had and it was the hardest I've ever laughed.
+
+> p7 | just writing this right now, but my face felt warm from laughing.
+> p100 | Hackerman and I would wrestle every minute of freedom which isn't much is the hardest I ever laughed.
+
+?? What were the best jokes and bits?
+
+Writing GULLIBLE on the ceiling. Making a fake meme phone in my flip book. Larping as a prison drug dealer with a coffee packet. Making a ghillie suit for lemon. Filling each other's pockets with pine needles during picture day. Putting Hazen in a locker. Lopez building a shrine out of pine cones. A 20-30 person pillow fight at lights out that lasted 15 minutes and was brutal and awesome.
+
+Arthur accidentally punched me in the face and gave me a nosebleed, and we laughed because bald with a bloody nose I looked like Eleven from Stranger Things.
+
+> p96 | I wrote global on the ceiling Gullible on the ceiling.
+> p96 | we laughed because it looked like 11 from Stranger Things where I was bald with a bloody nose
++ p40 p58 p59 p101
+
+?? Did you sing in the shower?
+
+Constantly, with Merritt and Arthur, plus Libby, Harris, Hernandez and Hubbard. 90s rock, Nickelback. The first time I heard a guy singing in the shower it made me genuinely happy because I hadn't heard music in weeks.
+
+> p36 | while showering one guy was singing, and it was nice to hear music. It made me happy.
+> p84 | I sang in the shower with Arthur and Merritt. We did 90s rock it feels good
++ p73 p81
+
+?? What's the deal with all the poop stories?
+
+They're in here because they were genuinely a major event in a life with nothing else in it. A two foot green one that drew a crowd and broke a railing. One that looked like a thousand mozzarella sticks. Shits as dense as tungsten. Being denied the latrine so many times that I told them I had to throw up, and then went and threw up.
+
+The very first friendship I made there was over a fart symphony story.
+
+> p66 | Also I took a 2 foot long giant green shit. It drew a crowd the railing broke
+> p75 | I told them I have to throw up and I vomited in the bathroom
++ p43 p62 p7
+
+?? What nickname did you get?
+
+John Deere, because I had the most hair in the platoon and zero bald spots. Libby also called me Frenchie, which is funny because he knows I'm not French despite my last name. The guy at the Forge cleanup just called me Jay.
+
+> p43 | I actually have the most hair here. My nickname is John Deere.
+> p51 | Libby called me Frenchie, which is funny because he knows I'm not French. Despite my surname.
+
+?? What's the strangest thing about army life?
+
+That there's a water park on base. And a Burger King, and fishing spots. Meanwhile we're outside in short sleeves at 20 degrees eating a chicken nugget for dinner.
+
+> p21 | future me when you're home Wright more about how weird military life is like how there's a waterpark here at least not for us.
+> p22 | I knew bases were big but waterpark, Burger King and fishing spots. Wow
+
+## cat=Art, ideas, and the future
+
+?? What did you want to make when you got out?
+
+Constantly changing, constantly listed. A Pokémon ROM hack with creatures inspired by real isolated-island animals like tardigrades. My sci-fi book. A philosophy book. An army journal — which is what this is. A Diary of a Wimpy Kid style book but for basic training. A podcast with one friend per episode. A YouTube short about Pollock and Rothko and the color theory of national flags.
+
+Mostly I just wanted to doodle one little creature a day.
+
+> p54 | Pokemon game that I wanna make maybe have some lower where the region was shrunk by legendary
+> p50 | I want a doodle one a day so I can look at I can look at clouds or a smudge on a cement
++ p48 p87 p27
+
+?? What's the sci-fi book about?
+
+I worked out a lot of it standing in fields. Planets that are alive with near-infinite energy in their cores. A coral reef planet with no water where evolved life runs on a different wavelength. A planet that mirrors and magnifies light so daytime is a dull red sun and night is brighter. A planet that freezes for a year, where a boat civilization becomes a winter town. Religious groups censoring all entertainment. Monopolized asteroid mining. Teleportation by radio-signal blueprint. Hyperspace that works by bringing the destination to you instead of moving toward it.
+
+> p87 | I thought about a planner that looks like an underwater coral reef, but with no water And it's very vibrant because the life that evolved there has a different wavelength
+> p87 | instead of walking towards a tennis ball for example, you bring a tennis ball to you like you changed both locations
++ p71 p86
+
+?? Why do you document everything?
+
+Because I'm afraid of impermanence and I have been since I was a child, and because I think it's tied to struggling with my faith more than I realize.
+
+> p30 | I also pondered my obsession with documentation a lifelong fear of the impermanence of creation reflected in my childhood
+> p30 | perhaps this lifelong struggle of being interested in history and being historian of my own life is because I struggle with my faith more than I realize
+
+?? What do you want out of the army?
+
+Military intelligence, 35 series, uncompromisingly. It's what got me through every day there. The problem is the MOS isn't locked until after OCS, and with conflicts going hot in Venezuela, Iran, Cuba and Mexico all within two months, I could get forced into infantry.
+
+Long term: officer, then maybe captain. Eighteen months of OCS, six months of AIT, nine months deployed.
+
+> p98 | I uncompromisingly want to be MI 35 series it's what gets me through every day.
+> p98 | I may be forced to become an infantry officer. It's not like a linker to not get it or worry I'd do a bad job.
++ p72 p40
+
+?? What happened with Iran while you were there?
+
+We found out we bombed Iran while standing in line for breakfast, from three drill sergeants saying so with no other details. The barracks reaction was the strangest thing I saw there — chanting and hollering like a college football locker room, with real anxiety underneath it, because half that room could be there within a year.
+
+My favorite quote of the day was somebody asking how many Super Bowl wins Iran has.
+
+> p81 | It was like the pregame of a college football championship, locker room, chanting and hollering
+> p81 | behind all the red in the face jokes and enchanting and cheering was anxiety brewing how half this room could be sent there within the year
++ p24 p83 p98
+
+?? What advice would you give someone shipping out?
+
+Reception is the worst of it, and it ends. Don't quit in the first five days when you have the least information you'll ever have.
+
+Bring your mind somewhere. I got through the Hammer by replaying the entire Modern Warfare 2 campaign in my head from the opening to Shepherd's death. Learn the sky, look at clouds, make up creatures. The physical part is survivable. The boredom is what you have to plan for.
+
+Be the guy who helps the Hubbard in your platoon. It cost me almost nothing and it's the part I'm proudest of.
+
+> p47 | I imagined in detail the modern warfare two campaign from the opening to Shepherd's demise
+> p4 | I hear reception is the hard part and it's supposed to be up from here.
++ p10 p97
+
+?? What did you actually learn about yourself?
+
+That I'm adaptable to a fault. That I can be bought for a sandwich. That I'd rather build a hole in the woods than sit in a suburb. That the thing I want most is quiet time to make things, which is the same thing I wanted when I was eleven.
+
+And that I perform well when things are actually hard — obstacle course, end of phase exam, the Anvil, the Forge — and badly when I'm just standing still.
+
+> p84 | I was the only one to hundred percent every station first try
+> p97 | I feel very successful, but I would also do things differently.
++ p49 p65 p78
+
+?? How do you feel about it now that you're home?
+
+Good, honestly. Graduation went well, family day was a 10 out of 10. I fell back into a couple of bad habits — some late nights gaming and catching up with friends — but overall it's fine. I've since done the first phase of OCS, which was really tough, and I did it.
+
+The journal ends the morning before family day because the book got packed up, so the last few days aren't in here.
+
+> p105 | Graduation went well. Family day went very well. It was a fantastic 10 out of 10 day and now I'm home.
+> p105 | I even had OCS and that was really tough but I did it
+
+?? Why did you keep this journal?
+
+Because writing it was the only time I felt close to the people I love, and because I've always been the historian of my own life. Some nights it was the only thing I had to look forward to.
+
+I also wrote, in January, that I wanted to feed it to an AI someday and see if it had feedback on where to grow. So — this site is that, more or less.
+
+> p14 | The only thing I look forward to writing this journal
+> p39 | See if when AI analyzes it if it has any feedback on where to grow, I really want to be a good officer then maybe captain one day
++ p80 p102
