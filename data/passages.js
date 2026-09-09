@@ -5,6 +5,7 @@ window.PASSAGES = {
    "page": "p3",
    "tag": "gut",
    "title": "The bottom",
+   "key": true,
    "quotes": [
     {
      "x": "I imagine all day what I get to write to you but now that I have a moment, I just wanna cry, but I have to do another hours."
@@ -25,6 +26,7 @@ window.PASSAGES = {
    "page": "p6",
    "tag": "craft",
    "title": "A list that won't stop",
+   "key": false,
    "quotes": [
     {
      "x": "It's exhaustion shivering cold a growling stomach interrupted by shots or news of someone collapsing in front of you and rushed away in an ambulance then hearing in passing about the two people who died the same week here and watching Wen try to stab his neck in front of me"
@@ -42,6 +44,7 @@ window.PASSAGES = {
    "page": "p11",
    "tag": "craft",
    "title": "Cherry blossoms",
+   "key": false,
    "quotes": [
     {
      "x": "It's always a strange feeling how watching death happen is the steaks are so high yet nothing of it is beautiful. There's no romanticized gestures. Final stands quotes just a body give out.",
@@ -63,6 +66,7 @@ window.PASSAGES = {
    "page": "p14",
    "tag": "gut",
    "title": "Songs going hazy",
+   "key": false,
    "quotes": [
     {
      "x": "I've not heard a song in so long the ones I thought I knew I realize they're getting hazy."
@@ -79,6 +83,7 @@ window.PASSAGES = {
    "page": "p16",
    "tag": "craft",
    "title": "The cold that penetrates",
+   "key": true,
    "quotes": [
     {
      "x": "It's a kind that penetrates the tips of your fingers, twisting itself like vines across your bones and veins Constricting as it shoots up your elbow to the point your hands feel dead as if the air stole them from you."
@@ -99,6 +104,7 @@ window.PASSAGES = {
    "page": "p30",
    "tag": "thread",
    "title": "Remember every cloud",
+   "key": false,
    "quotes": [
     {
      "x": "I used to ask my mom to remember every cloud I found beautiful or even a shape of a popcorn because that would be the only one like that"
@@ -116,6 +122,7 @@ window.PASSAGES = {
    "page": "p33",
    "tag": "craft",
    "title": "Mama, I joined the army",
+   "key": true,
    "quotes": [
     {
      "x": "Mama, I joined the army. You always said I look good in green mama. I joined the army. You always said. I was your little trooper now I'm uncle Sam's."
@@ -137,6 +144,7 @@ window.PASSAGES = {
    "page": "p38",
    "tag": "thinking",
    "title": "Intelligence and heaven",
+   "key": false,
    "quotes": [
     {
      "x": "The people who are smart enough to question and reject God, smart, and quotation marks Reject. God are the same people who make life easier for the disabled"
@@ -158,6 +166,7 @@ window.PASSAGES = {
    "page": "p39",
    "tag": "craft",
    "title": "A puddle of blood",
+   "key": false,
    "quotes": [
     {
      "x": "I was the last man standing, tried rushing for rifle on the ground, only for a knife plate to slice my neck from a man on the other team, the whistle blue I held my neck and watch my reflection in a puddle of blood on the ground. The reflection was occasionally obstructed as drops of blood fell and ripped into the water the puddle"
@@ -178,6 +187,7 @@ window.PASSAGES = {
    "page": "p45",
    "tag": "craft",
    "title": "They're sending me back in black",
+   "key": true,
    "quotes": [
     {
      "x": "Do not worry, mama I know the world's gray but there's a lot to see here. The shooting stars are yellow. The men are buried in green. That kid in the river is purple that private chest is red and his face is white his mates feel blue the town we toured his yellow. They're sending me back in black."
@@ -196,6 +206,7 @@ window.PASSAGES = {
    "page": "p46",
    "tag": "thinking",
    "title": "Starvation is the best trick",
+   "key": true,
    "quotes": [
     {
      "x": "starvation really is the best trick to breaking someone mentally"
@@ -216,6 +227,7 @@ window.PASSAGES = {
    "page": "p51",
    "tag": "craft",
    "title": "An archaeologist could find it",
+   "key": false,
    "quotes": [
     {
      "x": "It reminded me of something an archaeologist could find on a soldier from any time in history. It was transcending the human."
@@ -233,6 +245,7 @@ window.PASSAGES = {
    "page": "p51",
    "tag": "craft",
    "title": "Tolerating the intolerable",
+   "key": false,
    "quotes": [
     {
      "x": "my ability to adapt and become complacent in my environment has allowed me to tolerate the intolerable"
@@ -256,6 +269,7 @@ window.PASSAGES = {
    "page": "p55",
    "tag": "craft",
    "title": "Realpolitik, then the puncture",
+   "key": false,
    "quotes": [
     {
      "x": "those who fulfill the archetypal roles in a hierarchy of power, such as the warrior barbarians or roots and the nobles and scholars and priest classes of the platoon or under my own influence"
@@ -276,6 +290,7 @@ window.PASSAGES = {
    "page": "p57",
    "tag": "craft",
    "title": "What haven't I missed",
+   "key": false,
    "quotes": [
     {
      "x": "I missed Mikey's funeral our anniversary on Valentine's Day. I wish I could talk to you again, what haven't I missed"
@@ -296,6 +311,7 @@ window.PASSAGES = {
    "page": "p60",
    "tag": "gut",
    "title": "Bought for a sandwich",
+   "key": true,
    "quotes": [
     {
      "x": "Knowing I could be bought for one Chick-fil-A six dollar sandwich is not ideal."
@@ -316,6 +332,7 @@ window.PASSAGES = {
    "page": "p65",
    "tag": "thinking",
    "title": "The worst insult is boring",
+   "key": false,
    "quotes": [
     {
      "x": "I think the worst insult I could ever be called is boring to have the lowest deepest pain and highest highs to surmount to nothing."
@@ -336,6 +353,7 @@ window.PASSAGES = {
    "page": "p74",
    "tag": "thread",
    "title": "The weakness of my flesh",
+   "key": false,
    "quotes": [
     {
      "x": "as a kid I prayed my body waste could just evaporate I thought about food being condensed into a pill to feed you all day or for a superpower to never sleep"
@@ -356,6 +374,7 @@ window.PASSAGES = {
    "page": "p78",
    "tag": "turning",
    "title": "The closest thing to happy",
+   "key": true,
    "quotes": [
     {
      "x": "I enjoyed being in a windproof shelter that I dug rifle in my hand dirty in my face food in my stomach fresh air in my lungs sure I missed a warm shower, but it was my environment. I was locked in. It was the closest thing I've been to being happy my time here"
@@ -373,6 +392,7 @@ window.PASSAGES = {
    "page": "p81",
    "tag": "craft",
    "title": "Before I could speak",
+   "key": false,
    "quotes": [
     {
      "x": "I remember watching lightning storms with my mother before I could speak"
@@ -393,6 +413,7 @@ window.PASSAGES = {
    "page": "p82",
    "tag": "gut",
    "title": "My mother's twilight years",
+   "key": true,
    "quotes": [
     {
      "x": "When in reality, I wasted my youth and my mother's twilight years for underage drinking in Snapchat stories. I've betrayed myself for nothing and that's why I wound up here"
@@ -410,6 +431,7 @@ window.PASSAGES = {
    "page": "p83",
    "tag": "turning",
    "title": "Confession",
+   "key": true,
    "quotes": [
     {
      "x": "My voice remain a steady of steel yet my eyes poured like a faucet onto the bleacher chairs."
@@ -431,6 +453,7 @@ window.PASSAGES = {
    "page": "p97",
    "tag": "turning",
    "title": "Hubbard's last day",
+   "key": true,
    "quotes": [
     {
      "x": "today's Hubbard's last day I wish I did more too Step in on his sake, but I was the first person to shake. His hand gave him a hug he thanked me deeply for everything"
@@ -448,6 +471,7 @@ window.PASSAGES = {
    "page": "p99",
    "tag": "craft",
    "title": "Embers",
+   "key": true,
    "quotes": [
     {
      "x": "for so long inside me Amber's formed in my heart. I tried so hard to sniff them out stomping drowning, neglecting but blind eye can still see in the minds eye.",

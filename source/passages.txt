@@ -7,7 +7,7 @@
 #
 # tags: craft | turning | thread | gut | thinking
 
-@@ page=p3 | tag=gut | title=The bottom
+@@ page=p3 | tag=gut | title=The bottom | key=yes
 > I imagine all day what I get to write to you but now that I have a moment, I just wanna cry, but I have to do another hours.
 > The only thing I have to look forward to is to cry to tears and falling asleep instantly to dream of you
 
@@ -35,7 +35,7 @@ Then the cherry blossom, which is doing something specific. He isn't saying deat
 
 Fourteen words. Nothing else in the journal measures the length of the deprivation better — not the hunger, not the cold. He's not losing music, he's losing the memory of music.
 
-@@ page=p16 | tag=craft | title=The cold that penetrates
+@@ page=p16 | tag=craft | title=The cold that penetrates | key=yes
 > It's a kind that penetrates the tips of your fingers, twisting itself like vines across your bones and veins Constricting as it shoots up your elbow to the point your hands feel dead as if the air stole them from you.
 > the little I can squeeze my purple red hands leaves a pure white mark that takes seconds to disappear. You are not allowed to move.
 
@@ -50,7 +50,7 @@ The origin story for the entire journal, and probably for the quarter-million ph
 
 He's explaining why he documents everything, and the answer turns out to be a small kid handing his mother things to hold because he already understood they wouldn't come back. That she's the one he asked is the part that hurts.
 
-@@ page=p33 | tag=craft | title=Mama, I joined the army
+@@ page=p33 | tag=craft | title=Mama, I joined the army | key=yes
 > Mama, I joined the army. You always said I look good in green mama. I joined the army. You always said. I was your little trooper now I'm uncle Sam's.
 > green was your favorite color but maybe that's because of trees maybe I'm still your little boy. Maybe there's other ways to travel but mama, I joined the army the way things are maybe I'll see you soon. I wonder what you'd say
 
@@ -78,7 +78,7 @@ A dream about an airsoft match that turns into his own death, rendered with a ca
 
 Then the last line pulls the rug: he isn't frightened, he's embarrassed about losing. That's the whole man in one sentence.
 
-@@ page=p45 | tag=craft | title=They're sending me back in black
+@@ page=p45 | tag=craft | title=They're sending me back in black | key=yes
 > Do not worry, mama I know the world's gray but there's a lot to see here. The shooting stars are yellow. The men are buried in green. That kid in the river is purple that private chest is red and his face is white his mates feel blue the town we toured his yellow. They're sending me back in black.
 
 A formal exercise, and he pulls it off. The whole thing is built out of colors — gray, yellow, green, purple, red, white, blue, yellow — and every one is doing a job. Green is burial. Purple is a drowned kid. Red and white are a chest wound and the face above it. Blue is grief, sitting right next to red and white so the flag assembles itself without ever being mentioned.
@@ -87,7 +87,7 @@ Then black, which is the only color that hasn't appeared, saved for the last thr
 
 Written the same night as "beat me freeze me starve me."
 
-@@ page=p46 | tag=thinking | title=Starvation is the best trick
+@@ page=p46 | tag=thinking | title=Starvation is the best trick | key=yes
 > starvation really is the best trick to breaking someone mentally
 > you can hardly form coherent thoughts just reflections of urges I want food I need to pee. It's cold. I miss Home.
 
@@ -127,7 +127,7 @@ A list that escalates properly: a childhood home, a dog, a grandfather, a Super 
 
 Then the last line does two things at once. "Dandelions on sidewalk cracks" drops the scale to nothing, right after a funeral — the enormous and the trivial priced the same, which is what homesickness actually feels like. And "hell I miss my own funeral" flips the word from *absent for* to *long for*, and lands the pun on the one thing he can't have missed yet.
 
-@@ page=p60 | tag=gut | title=Bought for a sandwich
+@@ page=p60 | tag=gut | title=Bought for a sandwich | key=yes
 > Knowing I could be bought for one Chick-fil-A six dollar sandwich is not ideal.
 > even when I knew I was being used. I'd still comply that said I do not view myself as a victim of any of these causes.
 
@@ -151,7 +151,7 @@ He breaks his Lenten fast on a beef stick without noticing, and instead of shrug
 
 "Blinded by a piece of beef jerky" is the line. He's not upset about the meat. He's upset that a lifetime of conviction lost to four ounces of MRE while he wasn't paying attention, and he's honest enough to wonder what else it could lose to.
 
-@@ page=p78 | tag=turning | title=The closest thing to happy
+@@ page=p78 | tag=turning | title=The closest thing to happy | key=yes
 > I enjoyed being in a windproof shelter that I dug rifle in my hand dirty in my face food in my stomach fresh air in my lungs sure I missed a warm shower, but it was my environment. I was locked in. It was the closest thing I've been to being happy my time here
 
 The peak of the book, and notice what it takes: a hole in frozen ground that he dug himself.
@@ -166,14 +166,14 @@ Starvation and exhaustion crack something open and thirty-year-old memories star
 
 "Before I could speak" is doing something quietly precise: he's dating the memory by what he couldn't yet do, which puts it earlier than language, which is where it shouldn't be retrievable from at all. And then he distrusts all of it. That last line is the honest one.
 
-@@ page=p82 | tag=gut | title=My mother's twilight years
+@@ page=p82 | tag=gut | title=My mother's twilight years | key=yes
 > When in reality, I wasted my youth and my mother's twilight years for underage drinking in Snapchat stories. I've betrayed myself for nothing and that's why I wound up here
 
 The hardest sentence in the journal, and the structure is what makes it land — his youth and her last years counted as one loss, because they were the same years, and he was somewhere else for them.
 
 "Snapchat stories" is the cruelest detail and he chose it deliberately. Not parties, not friends. The most disposable thing he can name, weighed against the time.
 
-@@ page=p83 | tag=turning | title=Confession
+@@ page=p83 | tag=turning | title=Confession | key=yes
 > My voice remain a steady of steel yet my eyes poured like a faucet onto the bleacher chairs.
 > he listened he felt he reflected he was that Menter I craved so bad
 
@@ -181,14 +181,14 @@ The best single sentence in the book. Voice like steel, eyes like a faucet, and 
 
 Then four verbs with no commas: he listened he felt he reflected he was. For weeks he'd been writing that he wanted a mentor and doubted one existed. He found him in a folding chair on a Sunday.
 
-@@ page=p97 | tag=turning | title=Hubbard's last day
+@@ page=p97 | tag=turning | title=Hubbard's last day | key=yes
 > today's Hubbard's last day I wish I did more too Step in on his sake, but I was the first person to shake. His hand gave him a hug he thanked me deeply for everything
 
 The moral resolution of the longest relationship in the book — the kid the whole company used as a punching bag, who he volunteered to be battle buddy for on week one and never stopped covering.
 
 He gets it exactly backwards in the best way: he opens by wishing he'd done more, then reports being the only one who said goodbye. He doesn't notice those sit strangely together. That's what makes it true.
 
-@@ page=p99 | tag=craft | title=Embers
+@@ page=p99 | tag=craft | title=Embers | key=yes
 > for so long inside me Amber's formed in my heart. I tried so hard to sniff them out stomping drowning, neglecting but blind eye can still see in the minds eye.
 > These aches don't feel like growing pains they've etched themselves into every muscle, even my frontal lobe. I don't know if this is what I should fight or fight for
 > Am I burning up with passion or being pulled into hell why do I desire things? I don't need why would I throw everything else away for a night is it going to be like this forever bending until I break

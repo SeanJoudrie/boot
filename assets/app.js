@@ -294,7 +294,7 @@
   renderQuestions(Q.questions);
 
   /* ── passages ───────────────────────────────────────────── */
-  var activeTag = null;
+  var showAll = false;   // default: just the essential ones
 
   function passageHTML(it, i) {
     var quotes = it.quotes.map(function (q) {
@@ -316,32 +316,28 @@
   }
 
   function renderPassages() {
-    var list = activeTag
-      ? P.items.filter(function (i) { return i.tag === activeTag; })
-      : P.items;
+    var list = showAll ? P.items : P.items.filter(function (i) { return i.key; });
     $("#passages").innerHTML = list.map(passageHTML).join("");
   }
 
   function renderPtags() {
-    var counts = {};
-    P.items.forEach(function (i) { counts[i.tag] = (counts[i.tag] || 0) + 1; });
-    var html = ['<button data-tag="">All ' + P.items.length + "</button>"];
-    Object.keys(P.tags).forEach(function (k) {
-      if (counts[k])
-        html.push('<button data-tag="' + k + '">' + esc(P.tags[k]) + " " + counts[k] + "</button>");
-    });
-    $("#ptags").innerHTML = html.join("");
+    var nKey = P.items.filter(function (i) { return i.key; }).length;
+    $("#ptags").innerHTML =
+      '<button data-all="0">The essential ' + nKey + "</button>" +
+      '<button data-all="1">All ' + P.items.length + " passages</button>";
     $$("#ptags button").forEach(function (b) {
-      b.classList.toggle("is-on", (b.getAttribute("data-tag") || null) === activeTag);
+      b.classList.toggle("is-on", (b.getAttribute("data-all") === "1") === showAll);
     });
   }
 
   $("#ptags").addEventListener("click", function (ev) {
     var b = ev.target.closest("button");
     if (!b) return;
-    activeTag = b.getAttribute("data-tag") || null;
+    showAll = b.getAttribute("data-all") === "1";
     renderPtags();
     renderPassages();
+    var h = $("#view-passages .ask-head");
+    if (h) window.scrollTo(0, 0);
   });
 
   renderPtags();

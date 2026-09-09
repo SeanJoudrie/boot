@@ -70,6 +70,7 @@ def main():
             if tag not in TAGS:
                 errors.append("line %d: unknown tag %r" % (lineno, tag))
             cur = {"page": pid, "tag": tag, "title": meta.get("title", ""),
+                   "key": meta.get("key", "") == "yes",
                    "quotes": [], "note": []}
             continue
         if cur is None:
@@ -114,8 +115,9 @@ def main():
         fh.write(";\n")
 
     print("wrote %s" % OUT)
-    print("  %d passages, %d verified excerpts"
-          % (len(items), sum(len(i["quotes"]) for i in items)))
+    print("  %d passages (%d essential), %d verified excerpts"
+          % (len(items), sum(1 for i in items if i["key"]),
+             sum(len(i["quotes"]) for i in items)))
 
 
 if __name__ == "__main__":
