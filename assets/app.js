@@ -296,22 +296,55 @@
   /* ── passages ───────────────────────────────────────────── */
   var showAll = false;   // default: just the essential ones
 
+  // escape a paragraph, lighting up the excerpts that got it picked
+  function litUp(text, needles) {
+    var ranges = [];
+    needles.forEach(function (n) {
+      var at = text.indexOf(n);
+      if (at >= 0) ranges.push([at, at + n.length]);
+    });
+    if (!ranges.length) return esc(text);
+    ranges.sort(function (a, b) { return a[0] - b[0]; });
+    var merged = [], cur = ranges[0];
+    for (var k = 1; k < ranges.length; k++) {
+      if (ranges[k][0] <= cur[1]) cur[1] = Math.max(cur[1], ranges[k][1]);
+      else { merged.push(cur); cur = ranges[k]; }
+    }
+    merged.push(cur);
+    var out = "", pos = 0;
+    merged.forEach(function (r) {
+      out += esc(text.slice(pos, r[0])) +
+        '<mark class="lit">' + esc(text.slice(r[0], r[1])) + "</mark>";
+      pos = r[1];
+    });
+    return out + esc(text.slice(pos));
+  }
+
   function passageHTML(it, i) {
-    var quotes = it.quotes.map(function (q) {
-      return '<blockquote class="excerpt">' + esc(txt(q)) + "</blockquote>";
-    }).join("");
-    var note = it.note.map(function (n) { return "<p>" + esc(n) + "</p>"; }).join("");
     var e = byId[it.page];
+    var needles = it.quotes.map(txt);
+
+    var art = 0;
+    var body = e.blocks.map(function (b) {
+      if (b.t === "p") return "<p>" + litUp(txt(b), needles) + "</p>";
+      if (b.t === "art") { art++; return artHTML(e, b, art); }
+      return '<p class="redacted">[' + esc(b.x) + "]</p>";
+    }).join("");
+
+    var note = it.note.map(function (n) { return "<p>" + esc(n) + "</p>"; }).join("");
+    var stamp = (e.approx ? "≈ " : "") + (e.pretty || "") +
+      (e.head && e.head !== e.pretty ? " · " + e.head : "");
+
     return '<article class="passage" id="x-' + it.page + '">' +
       '<div class="p-head">' +
       '<span class="p-num">' + String(i + 1).padStart(2, "0") + "</span>" +
       '<span class="p-tag">' + esc(P.tags[it.tag] || it.tag) + "</span>" +
       "<h3>" + esc(it.title) + "</h3></div>" +
-      quotes +
-      '<div class="p-note">' + note + "</div>" +
+      '<p class="p-stamp">page ' + it.n + " · " + esc(stamp) + "</p>" +
+      '<div class="p-body">' + body + "</div>" +
+      '<div class="p-note"><h4>Why this one</h4>' + note + "</div>" +
       '<p class="p-src"><a href="#' + it.page + '" data-page="' + it.page + '">' +
-      "Read page " + it.n + (it.pretty ? " · " + esc(it.pretty) : "") +
-      " — " + esc(it.ptitle) + " →</a></p>" +
+      "See it in the journal, in order →</a></p>" +
       "</article>";
   }
 
