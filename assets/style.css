@@ -22,6 +22,7 @@
   --shadow:0 1px 2px rgba(60,50,30,.10), 0 8px 22px rgba(60,50,30,.07);
   --serif:"Newsreader","Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
   --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --topbar:64px;
   --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
 }
 @media (prefers-color-scheme:dark){
@@ -63,7 +64,7 @@
 
 *{box-sizing:border-box}
 :focus-visible{outline:2px solid var(--pen);outline-offset:2px;border-radius:3px}
-html{scroll-padding-top:88px}
+html{scroll-padding-top:calc(var(--topbar) + 24px)}
 body{
   margin:0;background:var(--paper);color:var(--ink);
   font-family:var(--serif);font-size:17px;line-height:1.62;
@@ -134,7 +135,7 @@ code{font:13px/1.5 var(--mono);background:var(--pen-soft);padding:1px 5px;border
 /* ── layout ─────────────────────────────────────────────────── */
 .layout{display:grid;grid-template-columns:224px minmax(0,1fr);gap:40px;padding-top:34px;padding-bottom:100px}
 .rail,.rail-in{min-width:0}
-.rail-in{position:sticky;top:88px;padding-bottom:20px}
+.rail-in{position:sticky;top:calc(var(--topbar) + 24px);padding-bottom:20px}
 .rail-h{font:600 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin:0 0 12px}
 .chapters{list-style:none;margin:0 0 22px;padding:0;border-left:1.5px solid var(--rule)}
 .chapters button{
@@ -155,7 +156,7 @@ code{font:13px/1.5 var(--mono);background:var(--pen-soft);padding:1px 5px;border
 /* ── a page ─────────────────────────────────────────────────── */
 .pages{min-width:0;display:flex;flex-direction:column;gap:22px}
 .sheet{
-  position:relative;background:var(--sheet);border:1px solid var(--rule);border-radius:3px;
+  scroll-margin-top:0;position:relative;background:var(--sheet);border:1px solid var(--rule);border-radius:3px;
   padding:30px 38px 34px;box-shadow:var(--shadow);
 }
 .sheet::before{ /* margin rule, like a notebook */
@@ -236,6 +237,27 @@ code{font:13px/1.5 var(--mono);background:var(--pen-soft);padding:1px 5px;border
 .alsosee a:hover{border-bottom-color:var(--pen)}
 .empty{color:var(--ink-3);padding:40px 0 120px;font-size:17px}
 
+/* ── passages ───────────────────────────────────────────────── */
+.plist{padding-bottom:110px;max-width:800px;display:flex;flex-direction:column;gap:0}
+.passage{padding:34px 0;border-top:1px solid var(--rule-2)}
+.passage:first-child{border-top:0;padding-top:8px}
+.p-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.p-num{font:600 11px/1 var(--mono);color:var(--ink-3);letter-spacing:.06em}
+.p-head h3{margin:0;font-size:25px;line-height:1.16;letter-spacing:-.015em;font-weight:600;
+  text-wrap:balance;flex:1 1 100%;order:2}
+.p-tag{font:600 10px/1 var(--mono);letter-spacing:.13em;text-transform:uppercase;
+  color:var(--accent);border:1px solid var(--rule);border-radius:20px;padding:5px 9px}
+.excerpt{
+  margin:0 0 14px;padding:2px 0 2px 18px;border-left:2.5px solid var(--accent);
+  font-size:18.5px;line-height:1.55;color:var(--ink);
+}
+.excerpt:last-of-type{margin-bottom:20px}
+.p-note p{margin:0 0 14px;color:var(--ink-2)}
+.p-note p:last-child{margin-bottom:0}
+.p-src{margin-top:18px;font:400 12.5px/1 var(--sans)}
+.p-src a{color:var(--pen);text-decoration:none;border-bottom:1px solid transparent}
+.p-src a:hover{border-bottom-color:var(--pen)}
+
 /* ── about ──────────────────────────────────────────────────── */
 .prose{max-width:70ch;padding:52px 22px 120px}
 .prose h1{font-size:clamp(34px,6vw,50px);line-height:1.04;margin:0 0 22px;letter-spacing:-.028em;font-weight:600}
@@ -265,7 +287,7 @@ code{font:13px/1.5 var(--mono);background:var(--pen-soft);padding:1px 5px;border
 /* ── narrow ─────────────────────────────────────────────────── */
 @media (max-width:900px){
   .layout{grid-template-columns:minmax(0,1fr);gap:0}
-  .rail{position:sticky;top:62px;z-index:20;background:var(--paper);
+  .rail{position:sticky;top:var(--topbar);z-index:20;background:var(--paper);
     border-bottom:1px solid var(--rule);margin:0 -22px;padding:12px 22px}
   .rail-in{position:static;padding:0}
   .rail-h,.rail-note,.rail-jump{display:none}
@@ -283,8 +305,16 @@ code{font:13px/1.5 var(--mono);background:var(--pen-soft);padding:1px 5px;border
   .search input{width:150px}
 }
 @media (max-width:620px){
+  :root{--topbar:98px}
   body{font-size:16.5px}
-  .tabs .tab{padding:8px 9px;font-size:13.5px}
+  /* brand + controls on one row, tabs on their own scrolling row underneath */
+  .topbar-in{flex-wrap:wrap;height:auto;gap:10px;padding-top:9px}
+  .brand{order:1}
+  .tools{order:2;margin-left:auto}
+  .tabs{order:3;flex:1 1 100%;margin:0 -22px;padding:0 22px 9px;
+    overflow-x:auto;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:0 0 auto;padding:8px 11px;font-size:13.5px}
   .tools .search{display:none}
   .mode-btn{padding:9px 9px;font-size:12px}
   .cover{padding:48px 0 40px}

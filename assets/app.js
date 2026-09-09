@@ -4,6 +4,7 @@
 
   var J = window.JOURNAL || { entries: [], chapters: [], stats: {} };
   var Q = window.QUESTIONS || { questions: [], cats: [] };
+  var P = window.PASSAGES || { items: [], tags: {} };
   var ART = window.ART || {};
 
   var entries = J.entries;
@@ -61,6 +62,7 @@
   setText("#stArt", J.stats.art);
   setText("#stFix", (J.stats.fixes || 0).toLocaleString());
   setText("#stFix2", (J.stats.fixes || 0).toLocaleString());
+  setText("#stPass", P.items.length);
 
   /* ── render journal ─────────────────────────────────────── */
   function artHTML(entry, block, idx) {
@@ -123,6 +125,7 @@
     try { localStorage.setItem("basic-mode", clean ? "clean" : "raw"); } catch (e) {}
     paintMode();
     renderPages();
+    renderPassages();
 
     if (keepId) {
       var el = document.getElementById(keepId);
@@ -148,7 +151,8 @@
   });
 
   /* ── views ──────────────────────────────────────────────── */
-  var views = { journal: $("#view-journal"), ask: $("#view-ask"), about: $("#view-about") };
+  var views = { journal: $("#view-journal"), passages: $("#view-passages"),
+                ask: $("#view-ask"), about: $("#view-about") };
   var current = "journal";
 
   function show(name, keepScroll) {
@@ -289,6 +293,60 @@
   renderCats();
   renderQuestions(Q.questions);
 
+  /* ── passages ───────────────────────────────────────────── */
+  var activeTag = null;
+
+  function passageHTML(it, i) {
+    var quotes = it.quotes.map(function (q) {
+      return '<blockquote class="excerpt">' + esc(txt(q)) + "</blockquote>";
+    }).join("");
+    var note = it.note.map(function (n) { return "<p>" + esc(n) + "</p>"; }).join("");
+    var e = byId[it.page];
+    return '<article class="passage" id="x-' + it.page + '">' +
+      '<div class="p-head">' +
+      '<span class="p-num">' + String(i + 1).padStart(2, "0") + "</span>" +
+      '<span class="p-tag">' + esc(P.tags[it.tag] || it.tag) + "</span>" +
+      "<h3>" + esc(it.title) + "</h3></div>" +
+      quotes +
+      '<div class="p-note">' + note + "</div>" +
+      '<p class="p-src"><a href="#' + it.page + '" data-page="' + it.page + '">' +
+      "Read page " + it.n + (it.pretty ? " · " + esc(it.pretty) : "") +
+      " — " + esc(it.ptitle) + " →</a></p>" +
+      "</article>";
+  }
+
+  function renderPassages() {
+    var list = activeTag
+      ? P.items.filter(function (i) { return i.tag === activeTag; })
+      : P.items;
+    $("#passages").innerHTML = list.map(passageHTML).join("");
+  }
+
+  function renderPtags() {
+    var counts = {};
+    P.items.forEach(function (i) { counts[i.tag] = (counts[i.tag] || 0) + 1; });
+    var html = ['<button data-tag="">All ' + P.items.length + "</button>"];
+    Object.keys(P.tags).forEach(function (k) {
+      if (counts[k])
+        html.push('<button data-tag="' + k + '">' + esc(P.tags[k]) + " " + counts[k] + "</button>");
+    });
+    $("#ptags").innerHTML = html.join("");
+    $$("#ptags button").forEach(function (b) {
+      b.classList.toggle("is-on", (b.getAttribute("data-tag") || null) === activeTag);
+    });
+  }
+
+  $("#ptags").addEventListener("click", function (ev) {
+    var b = ev.target.closest("button");
+    if (!b) return;
+    activeTag = b.getAttribute("data-tag") || null;
+    renderPtags();
+    renderPassages();
+  });
+
+  renderPtags();
+  renderPassages();
+
   /* ── search ─────────────────────────────────────────────── */
   var searchBox = $("#q");
   var resultsHost = document.createElement("div");
@@ -351,11 +409,16 @@
   });
 
   /* ── keyboard ───────────────────────────────────────────── */
-  // the first page still showing below the sticky header
+  // the first page still showing below the sticky header, whatever height it is
+  function headerBottom() {
+    var t = $(".topbar");
+    return (t ? t.getBoundingClientRect().height : 64) + 16;
+  }
+
   function visiblePage() {
-    var sheets = $$(".sheet");
+    var sheets = $$(".sheet"), edge = headerBottom();
     for (var i = 0; i < sheets.length; i++) {
-      if (sheets[i].getBoundingClientRect().bottom > 80) return sheets[i];
+      if (sheets[i].getBoundingClientRect().bottom > edge) return sheets[i];
     }
     return sheets[sheets.length - 1] || null;
   }

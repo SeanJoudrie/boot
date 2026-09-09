@@ -27,6 +27,7 @@
   --shadow:0 1px 2px rgba(60,50,30,.10), 0 8px 22px rgba(60,50,30,.07);
   --serif:"Newsreader","Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
   --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --topbar:64px;
   --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
 }
 @media (prefers-color-scheme:dark){
@@ -68,7 +69,7 @@
 
 *{box-sizing:border-box}
 :focus-visible{outline:2px solid var(--pen);outline-offset:2px;border-radius:3px}
-html{scroll-padding-top:88px}
+html{scroll-padding-top:calc(var(--topbar) + 24px)}
 body{
   margin:0;background:var(--paper);color:var(--ink);
   font-family:var(--serif);font-size:17px;line-height:1.62;
@@ -139,7 +140,7 @@ code{font:13px/1.5 var(--mono);background:var(--pen-soft);padding:1px 5px;border
 /* ── layout ─────────────────────────────────────────────────── */
 .layout{display:grid;grid-template-columns:224px minmax(0,1fr);gap:40px;padding-top:34px;padding-bottom:100px}
 .rail,.rail-in{min-width:0}
-.rail-in{position:sticky;top:88px;padding-bottom:20px}
+.rail-in{position:sticky;top:calc(var(--topbar) + 24px);padding-bottom:20px}
 .rail-h{font:600 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin:0 0 12px}
 .chapters{list-style:none;margin:0 0 22px;padding:0;border-left:1.5px solid var(--rule)}
 .chapters button{
@@ -160,7 +161,7 @@ code{font:13px/1.5 var(--mono);background:var(--pen-soft);padding:1px 5px;border
 /* ── a page ─────────────────────────────────────────────────── */
 .pages{min-width:0;display:flex;flex-direction:column;gap:22px}
 .sheet{
-  position:relative;background:var(--sheet);border:1px solid var(--rule);border-radius:3px;
+  scroll-margin-top:0;position:relative;background:var(--sheet);border:1px solid var(--rule);border-radius:3px;
   padding:30px 38px 34px;box-shadow:var(--shadow);
 }
 .sheet::before{ /* margin rule, like a notebook */
@@ -241,6 +242,27 @@ code{font:13px/1.5 var(--mono);background:var(--pen-soft);padding:1px 5px;border
 .alsosee a:hover{border-bottom-color:var(--pen)}
 .empty{color:var(--ink-3);padding:40px 0 120px;font-size:17px}
 
+/* ── passages ───────────────────────────────────────────────── */
+.plist{padding-bottom:110px;max-width:800px;display:flex;flex-direction:column;gap:0}
+.passage{padding:34px 0;border-top:1px solid var(--rule-2)}
+.passage:first-child{border-top:0;padding-top:8px}
+.p-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.p-num{font:600 11px/1 var(--mono);color:var(--ink-3);letter-spacing:.06em}
+.p-head h3{margin:0;font-size:25px;line-height:1.16;letter-spacing:-.015em;font-weight:600;
+  text-wrap:balance;flex:1 1 100%;order:2}
+.p-tag{font:600 10px/1 var(--mono);letter-spacing:.13em;text-transform:uppercase;
+  color:var(--accent);border:1px solid var(--rule);border-radius:20px;padding:5px 9px}
+.excerpt{
+  margin:0 0 14px;padding:2px 0 2px 18px;border-left:2.5px solid var(--accent);
+  font-size:18.5px;line-height:1.55;color:var(--ink);
+}
+.excerpt:last-of-type{margin-bottom:20px}
+.p-note p{margin:0 0 14px;color:var(--ink-2)}
+.p-note p:last-child{margin-bottom:0}
+.p-src{margin-top:18px;font:400 12.5px/1 var(--sans)}
+.p-src a{color:var(--pen);text-decoration:none;border-bottom:1px solid transparent}
+.p-src a:hover{border-bottom-color:var(--pen)}
+
 /* ── about ──────────────────────────────────────────────────── */
 .prose{max-width:70ch;padding:52px 22px 120px}
 .prose h1{font-size:clamp(34px,6vw,50px);line-height:1.04;margin:0 0 22px;letter-spacing:-.028em;font-weight:600}
@@ -270,7 +292,7 @@ code{font:13px/1.5 var(--mono);background:var(--pen-soft);padding:1px 5px;border
 /* ── narrow ─────────────────────────────────────────────────── */
 @media (max-width:900px){
   .layout{grid-template-columns:minmax(0,1fr);gap:0}
-  .rail{position:sticky;top:62px;z-index:20;background:var(--paper);
+  .rail{position:sticky;top:var(--topbar);z-index:20;background:var(--paper);
     border-bottom:1px solid var(--rule);margin:0 -22px;padding:12px 22px}
   .rail-in{position:static;padding:0}
   .rail-h,.rail-note,.rail-jump{display:none}
@@ -288,8 +310,16 @@ code{font:13px/1.5 var(--mono);background:var(--pen-soft);padding:1px 5px;border
   .search input{width:150px}
 }
 @media (max-width:620px){
+  :root{--topbar:98px}
   body{font-size:16.5px}
-  .tabs .tab{padding:8px 9px;font-size:13.5px}
+  /* brand + controls on one row, tabs on their own scrolling row underneath */
+  .topbar-in{flex-wrap:wrap;height:auto;gap:10px;padding-top:9px}
+  .brand{order:1}
+  .tools{order:2;margin-left:auto}
+  .tabs{order:3;flex:1 1 100%;margin:0 -22px;padding:0 22px 9px;
+    overflow-x:auto;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{flex:0 0 auto;padding:8px 11px;font-size:13.5px}
   .tools .search{display:none}
   .mode-btn{padding:9px 9px;font-size:12px}
   .cover{padding:48px 0 40px}
@@ -308,6 +338,7 @@ code{font:13px/1.5 var(--mono);background:var(--pen-soft);padding:1px 5px;border
 
     <nav class="tabs" role="tablist">
       <button class="tab is-on" data-view="journal">Journal</button>
+      <button class="tab" data-view="passages">Passages</button>
       <button class="tab" data-view="ask">Ask me</button>
       <button class="tab" data-view="about">About</button>
     </nav>
@@ -362,6 +393,20 @@ code{font:13px/1.5 var(--mono);background:var(--pen-soft);padding:1px 5px;border
   </div>
 </main>
 
+<!-- ──────────────────────── PASSAGES ───────────────────────── -->
+<main id="view-passages" class="view" hidden>
+  <div class="wrap">
+    <section class="ask-head">
+      <h1>The passages worth reading</h1>
+      <p>Twenty-four of them, in order, out of a hundred and five pages. Some are here
+        because of what happened and some because of how well he wrote it — a few for both.
+        Every excerpt links to the full page it came from.</p>
+      <div id="ptags" class="cats"></div>
+    </section>
+    <div id="passages" class="plist"></div>
+  </div>
+</main>
+
 <!-- ─────────────────────────── ASK ─────────────────────────── -->
 <main id="view-ask" class="view" hidden>
   <div class="wrap">
@@ -413,6 +458,14 @@ code{font:13px/1.5 var(--mono);background:var(--pen-soft);padding:1px 5px;border
         somebody in a bad state, not a publication. Editing it after the fact would make
         it a different document.</li>
     </ul>
+
+    <h2>The passages</h2>
+    <p>The Passages tab is a selection of <b id="stPass">—</b> excerpts — the ones that
+      matter most to the story, and the ones that are simply written well. Each has a note
+      on why it's there and a link to the full page. It's the shortest honest route through
+      the book for someone who isn't going to read all 105 pages. The picks are a judgement
+      call and nothing more; they live in <code>source/passages.txt</code> and are easy to
+      argue with.</p>
 
     <h2>The answers</h2>
     <p>The Ask tab has <b id="stQ2">—</b> preset questions. The answers are written in my
@@ -5941,6 +5994,488 @@ window.QUESTIONS = {
  ]
 };
 
+// GENERATED by tools/build_passages.py from source/passages.txt.
+window.PASSAGES = {
+ "items": [
+  {
+   "page": "p3",
+   "tag": "gut",
+   "title": "The bottom",
+   "quotes": [
+    {
+     "x": "I imagine all day what I get to write to you but now that I have a moment, I just wanna cry, but I have to do another hours."
+    },
+    {
+     "x": "The only thing I have to look forward to is to cry to tears and falling asleep instantly to dream of you"
+    }
+   ],
+   "note": [
+    "Day two of seventy-four. This is the floor of the whole book, and it's worth reading first so the rest has somewhere to climb from.",
+    "The detail that does the work isn't the crying — it's \"I imagine all day what I get to write to you.\" He spent sixteen hours composing this, got two minutes, and it came out as a fragment. That gap between what he had to say and what the day let him write is the actual subject of the first three weeks."
+   ],
+   "n": 3,
+   "pretty": "January 13, 2026",
+   "ptitle": "Day two — the worst of it"
+  },
+  {
+   "page": "p6",
+   "tag": "craft",
+   "title": "A list that won't stop",
+   "quotes": [
+    {
+     "x": "It's exhaustion shivering cold a growling stomach interrupted by shots or news of someone collapsing in front of you and rushed away in an ambulance then hearing in passing about the two people who died the same week here and watching Wen try to stab his neck in front of me"
+    }
+   ],
+   "note": [
+    "One sentence, no punctuation, and it keeps loading. Exhaustion, cold, hunger, needles, an ambulance, two deaths, a suicide attempt — each item worse than the last, delivered at the same flat volume.",
+    "The missing commas aren't sloppiness here, they're the effect. Nothing gets a pause because nothing got a pause."
+   ],
+   "n": 6,
+   "pretty": "January 16, 2026",
+   "ptitle": "Mourning the life of me months ago"
+  },
+  {
+   "page": "p11",
+   "tag": "craft",
+   "title": "Cherry blossoms",
+   "quotes": [
+    {
+     "x": "It's always a strange feeling how watching death happen is the steaks are so high yet nothing of it is beautiful. There's no romanticized gestures. Final stands quotes just a body give out.",
+     "c": "It's always a strange feeling how watching death happen is the stakes are so high yet nothing of it is beautiful. There's no romanticized gestures. Final stands quotes just a body give out."
+    },
+    {
+     "x": "I just think about how some cherry blossoms when they begin to die it uses all this energy and a burst of petals."
+    }
+   ],
+   "note": [
+    "He watches a man get wheeled unconscious into an ambulance and arrives somewhere real: that death has no dramaturgy. \"Final stands quotes just a body give out\" — three nouns and a verb, and the sentence itself refuses to perform.",
+    "Then the cherry blossom, which is doing something specific. He isn't saying death is beautiful. He's saying a tree gets a finale and a person doesn't, and he resents it."
+   ],
+   "n": 11,
+   "pretty": "January 18, 2026",
+   "ptitle": "Cherry blossoms"
+  },
+  {
+   "page": "p14",
+   "tag": "gut",
+   "title": "Songs going hazy",
+   "quotes": [
+    {
+     "x": "I've not heard a song in so long the ones I thought I knew I realize they're getting hazy."
+    }
+   ],
+   "note": [
+    "Fourteen words. Nothing else in the journal measures the length of the deprivation better — not the hunger, not the cold. He's not losing music, he's losing the memory of music."
+   ],
+   "n": 14,
+   "pretty": "January 19, 2026",
+   "ptitle": "Sword of Damocles"
+  },
+  {
+   "page": "p16",
+   "tag": "craft",
+   "title": "The cold that penetrates",
+   "quotes": [
+    {
+     "x": "It's a kind that penetrates the tips of your fingers, twisting itself like vines across your bones and veins Constricting as it shoots up your elbow to the point your hands feel dead as if the air stole them from you."
+    },
+    {
+     "x": "the little I can squeeze my purple red hands leaves a pure white mark that takes seconds to disappear. You are not allowed to move."
+    }
+   ],
+   "note": [
+    "The best physical writing in the book, and it exists because he had sixteen motionless hours to find the words.",
+    "Notice it moves outward correctly — fingertips, then bones and veins, then the elbow, then the hands going dead. And it ends on a clinical detail, the white mark that takes seconds to fade, which is more convincing than any adjective. Then five words of context that reframe all of it: you are not allowed to move."
+   ],
+   "n": 16,
+   "pretty": "January 20, 2026",
+   "ptitle": "The cold that penetrates"
+  },
+  {
+   "page": "p30",
+   "tag": "thread",
+   "title": "Remember every cloud",
+   "quotes": [
+    {
+     "x": "I used to ask my mom to remember every cloud I found beautiful or even a shape of a popcorn because that would be the only one like that"
+    }
+   ],
+   "note": [
+    "The origin story for the entire journal, and probably for the quarter-million photos too.",
+    "He's explaining why he documents everything, and the answer turns out to be a small kid handing his mother things to hold because he already understood they wouldn't come back. That she's the one he asked is the part that hurts."
+   ],
+   "n": 30,
+   "pretty": "January 26, 2026",
+   "ptitle": "Pneumonia, rifles, and 6000 years"
+  },
+  {
+   "page": "p33",
+   "tag": "craft",
+   "title": "Mama, I joined the army",
+   "quotes": [
+    {
+     "x": "Mama, I joined the army. You always said I look good in green mama. I joined the army. You always said. I was your little trooper now I'm uncle Sam's."
+    },
+    {
+     "x": "green was your favorite color but maybe that's because of trees maybe I'm still your little boy. Maybe there's other ways to travel but mama, I joined the army the way things are maybe I'll see you soon. I wonder what you'd say"
+    }
+   ],
+   "note": [
+    "Written the same night as his first fitness test, with no announcement.",
+    "The refrain does the structural work — \"mama, I joined the army\" comes back four times and means something different each time: a boast, then a confession, then an apology. And the green turn is genuinely good: green is what she said he looked good in, green is her favorite color, green is what the men are buried in two pages later.",
+    "\"Maybe there's other ways to travel\" and \"maybe I'll see you soon\" are both saying the same thing, and he lets you find it yourself."
+   ],
+   "n": 33,
+   "pretty": "January 28, 2026",
+   "ptitle": "Mama, I joined the army"
+  },
+  {
+   "page": "p38",
+   "tag": "thinking",
+   "title": "Intelligence and heaven",
+   "quotes": [
+    {
+     "x": "The people who are smart enough to question and reject God, smart, and quotation marks Reject. God are the same people who make life easier for the disabled"
+    },
+    {
+     "x": "I really hope hell is empty or nearly empty in Jesus. Message of radical forgiveness is maintained."
+    }
+   ],
+   "note": [
+    "The most sustained original thinking in the journal, worked out at one in the morning on fire guard with no books and nobody to check against.",
+    "The argument: the disabled and infants are guaranteed heaven; the intelligent are the ones equipped to doubt; the intelligent are also the ones who build the plumbing and the human rights that make everyone else's life livable. So the trait that lets you serve everybody is the same trait most likely to damn you.",
+    "He doesn't resolve it. He just refuses to stop looking at it, and lands somewhere generous."
+   ],
+   "n": 38,
+   "pretty": "January 31, 2026",
+   "ptitle": "Intelligence and heaven"
+  },
+  {
+   "page": "p39",
+   "tag": "craft",
+   "title": "A puddle of blood",
+   "quotes": [
+    {
+     "x": "I was the last man standing, tried rushing for rifle on the ground, only for a knife plate to slice my neck from a man on the other team, the whistle blue I held my neck and watch my reflection in a puddle of blood on the ground. The reflection was occasionally obstructed as drops of blood fell and ripped into the water the puddle"
+    },
+    {
+     "x": "I was not worried for my safety just sad that I lost"
+    }
+   ],
+   "note": [
+    "A dream about an airsoft match that turns into his own death, rendered with a camera operator's eye — he watches his reflection get interrupted by his own blood dripping into it.",
+    "Then the last line pulls the rug: he isn't frightened, he's embarrassed about losing. That's the whole man in one sentence."
+   ],
+   "n": 39,
+   "pretty": "January 31, 2026",
+   "ptitle": "Scars, and the airsoft dream"
+  },
+  {
+   "page": "p45",
+   "tag": "craft",
+   "title": "They're sending me back in black",
+   "quotes": [
+    {
+     "x": "Do not worry, mama I know the world's gray but there's a lot to see here. The shooting stars are yellow. The men are buried in green. That kid in the river is purple that private chest is red and his face is white his mates feel blue the town we toured his yellow. They're sending me back in black."
+    }
+   ],
+   "note": [
+    "A formal exercise, and he pulls it off. The whole thing is built out of colors — gray, yellow, green, purple, red, white, blue, yellow — and every one is doing a job. Green is burial. Purple is a drowned kid. Red and white are a chest wound and the face above it. Blue is grief, sitting right next to red and white so the flag assembles itself without ever being mentioned.",
+    "Then black, which is the only color that hasn't appeared, saved for the last three words.",
+    "Written the same night as \"beat me freeze me starve me.\""
+   ],
+   "n": 45,
+   "pretty": "February 3, 2026",
+   "ptitle": "They're sending me back in black"
+  },
+  {
+   "page": "p46",
+   "tag": "thinking",
+   "title": "Starvation is the best trick",
+   "quotes": [
+    {
+     "x": "starvation really is the best trick to breaking someone mentally"
+    },
+    {
+     "x": "you can hardly form coherent thoughts just reflections of urges I want food I need to pee. It's cold. I miss Home."
+    }
+   ],
+   "note": [
+    "The most useful paragraph in the book for anyone who wants to know what basic actually does to a person.",
+    "And he demonstrates it instead of describing it — the sentences shorten as he explains, until they're just the four urges themselves, in the order they arrive. The prose does the degradation it's talking about."
+   ],
+   "n": 46,
+   "pretty": "February 3, 2026",
+   "ptitle": "Starvation is the best trick"
+  },
+  {
+   "page": "p51",
+   "tag": "craft",
+   "title": "An archaeologist could find it",
+   "quotes": [
+    {
+     "x": "It reminded me of something an archaeologist could find on a soldier from any time in history. It was transcending the human."
+    }
+   ],
+   "note": [
+    "Libby shows him a letter to his wife, and this is what he says about it.",
+    "It's the best piece of criticism in the journal, and it's about someone else's writing. He's identifying the thing he's chasing in his own — a letter from a soldier that could be from any war, in any century. Two pages earlier he was worrying he can't write. Here he proves he can read."
+   ],
+   "n": 51,
+   "pretty": "February 7, 2026",
+   "ptitle": "Libby's letter, and heaven"
+  },
+  {
+   "page": "p51",
+   "tag": "craft",
+   "title": "Tolerating the intolerable",
+   "quotes": [
+    {
+     "x": "my ability to adapt and become complacent in my environment has allowed me to tolerate the intolerable"
+    },
+    {
+     "x": "over 250 active soldiers and six dryers"
+    },
+    {
+     "x": "I'm thankful for what this place provides Despite everything warmth. The community sleep are worth the price I pay"
+    }
+   ],
+   "note": [
+    "The line about tolerating the intolerable is the thesis of the entire middle of the book, and it's ambivalent on purpose — adaptability as both his survival mechanism and the thing that worries him about himself.",
+    "\"Over 250 active soldiers and six dryers\" is a comedian's line. The whole squalor of the place lands in one ratio."
+   ],
+   "n": 51,
+   "pretty": "February 7, 2026",
+   "ptitle": "Libby's letter, and heaven"
+  },
+  {
+   "page": "p55",
+   "tag": "craft",
+   "title": "Realpolitik, then the puncture",
+   "quotes": [
+    {
+     "x": "those who fulfill the archetypal roles in a hierarchy of power, such as the warrior barbarians or roots and the nobles and scholars and priest classes of the platoon or under my own influence"
+    },
+    {
+     "x": "everything I said here is true. I tried writing like a dramatic asshole. I promise this is no big deal. I just wanted to make this story, fun and sharpen my skills for when I actually continue writing my book at home"
+    }
+   ],
+   "note": [
+    "He spends a full page writing like a Renaissance court memoirist — barbarians, nobles, scholars, priests, favors curdling into dependence — and it's genuinely good pastiche.",
+    "Then he turns around and admits he was doing a bit. That deflation is what makes the page work; without it the whole thing would be insufferable. He wanted the practice and he wanted you to know he knew."
+   ],
+   "n": 55,
+   "pretty": "February 9, 2026",
+   "ptitle": "Realpolitik in real time"
+  },
+  {
+   "page": "p57",
+   "tag": "craft",
+   "title": "What haven't I missed",
+   "quotes": [
+    {
+     "x": "I missed Mikey's funeral our anniversary on Valentine's Day. I wish I could talk to you again, what haven't I missed"
+    },
+    {
+     "x": "dandelions on sidewalk cracks reunions dressed in black hell I miss my own funeral."
+    }
+   ],
+   "note": [
+    "A list that escalates properly: a childhood home, a dog, a grandfather, a Super Bowl, a concert, a funeral, an anniversary.",
+    "Then the last line does two things at once. \"Dandelions on sidewalk cracks\" drops the scale to nothing, right after a funeral — the enormous and the trivial priced the same, which is what homesickness actually feels like. And \"hell I miss my own funeral\" flips the word from *absent for* to *long for*, and lands the pun on the one thing he can't have missed yet."
+   ],
+   "n": 57,
+   "pretty": "February 10, 2026",
+   "ptitle": "What haven't I missed"
+  },
+  {
+   "page": "p60",
+   "tag": "gut",
+   "title": "Bought for a sandwich",
+   "quotes": [
+    {
+     "x": "Knowing I could be bought for one Chick-fil-A six dollar sandwich is not ideal."
+    },
+    {
+     "x": "even when I knew I was being used. I'd still comply that said I do not view myself as a victim of any of these causes."
+    }
+   ],
+   "note": [
+    "Written on fire guard at one in the morning, unprompted, about himself.",
+    "Most people can't do this — name a real flaw, price it exactly, and refuse the comfort of blaming anyone. He puts a dollar figure on his own loyalty, connects it to growing up hungry, connects that to going along with things he didn't want, and then explicitly declines to call himself a victim."
+   ],
+   "n": 60,
+   "pretty": "February 12, 2026",
+   "ptitle": "I could be bought for a sandwich"
+  },
+  {
+   "page": "p65",
+   "tag": "thinking",
+   "title": "The worst insult is boring",
+   "quotes": [
+    {
+     "x": "I think the worst insult I could ever be called is boring to have the lowest deepest pain and highest highs to surmount to nothing."
+    },
+    {
+     "x": "Maybe it's introspective ambition curious people are responsible for hierarchy medicine, slavery, smart phones in the atom bomb. Maybe a lack of satisfaction makes us break and build the world that didn't need us in the first place"
+    }
+   ],
+   "note": [
+    "Starts as a complaint about incurious people and turns into an argument against himself, which is what saves it.",
+    "He proposes that maybe the restless ones aren't better, just louder — and that the same appetite produced medicine and the atom bomb, hierarchy and slavery, on the same list without ranking them. He ends by calling himself a pompous asshole judging from a glass house, and he means it."
+   ],
+   "n": 65,
+   "pretty": "February 14, 2026",
+   "ptitle": "The worst insult is boring"
+  },
+  {
+   "page": "p74",
+   "tag": "thread",
+   "title": "The weakness of my flesh",
+   "quotes": [
+    {
+     "x": "as a kid I prayed my body waste could just evaporate I thought about food being condensed into a pill to feed you all day or for a superpower to never sleep"
+    },
+    {
+     "x": "I have these deep rooted emotions, opinions, and instincts, but was blinded by a piece of beef jerky."
+    }
+   ],
+   "note": [
+    "He breaks his Lenten fast on a beef stick without noticing, and instead of shrugging it off he follows it all the way down — to a second-grader praying that his own body would stop needing things.",
+    "\"Blinded by a piece of beef jerky\" is the line. He's not upset about the meat. He's upset that a lifetime of conviction lost to four ounces of MRE while he wasn't paying attention, and he's honest enough to wonder what else it could lose to."
+   ],
+   "n": 74,
+   "pretty": "February 20, 2026",
+   "ptitle": "The weakness of my flesh"
+  },
+  {
+   "page": "p78",
+   "tag": "turning",
+   "title": "The closest thing to happy",
+   "quotes": [
+    {
+     "x": "I enjoyed being in a windproof shelter that I dug rifle in my hand dirty in my face food in my stomach fresh air in my lungs sure I missed a warm shower, but it was my environment. I was locked in. It was the closest thing I've been to being happy my time here"
+    }
+   ],
+   "note": [
+    "The peak of the book, and notice what it takes: a hole in frozen ground that he dug himself.",
+    "The list is all first-person possession — my shelter, my rifle, my face, my stomach, my lungs. After six weeks of owning nothing and choosing nothing, he made one thing and it was enough. Six weeks earlier he wrote that he'd go back in time and tell himself not to come."
+   ],
+   "n": 78,
+   "pretty": "February 26, 2026",
+   "ptitle": "The Anvil — my first foxhole"
+  },
+  {
+   "page": "p81",
+   "tag": "craft",
+   "title": "Before I could speak",
+   "quotes": [
+    {
+     "x": "I remember watching lightning storms with my mother before I could speak"
+    },
+    {
+     "x": "they almost feel like these memories are not mine."
+    }
+   ],
+   "note": [
+    "Starvation and exhaustion crack something open and thirty-year-old memories start arriving in high resolution — bowling in kindergarten, a pink bathroom, motel quilt patterns, a fish named Lucky, the route from preschool.",
+    "\"Before I could speak\" is doing something quietly precise: he's dating the memory by what he couldn't yet do, which puts it earlier than language, which is where it shouldn't be retrievable from at all. And then he distrusts all of it. That last line is the honest one."
+   ],
+   "n": 81,
+   "pretty": "February 28, 2026",
+   "ptitle": "We bombed Iran"
+  },
+  {
+   "page": "p82",
+   "tag": "gut",
+   "title": "My mother's twilight years",
+   "quotes": [
+    {
+     "x": "When in reality, I wasted my youth and my mother's twilight years for underage drinking in Snapchat stories. I've betrayed myself for nothing and that's why I wound up here"
+    }
+   ],
+   "note": [
+    "The hardest sentence in the journal, and the structure is what makes it land — his youth and her last years counted as one loss, because they were the same years, and he was somewhere else for them.",
+    "\"Snapchat stories\" is the cruelest detail and he chose it deliberately. Not parties, not friends. The most disposable thing he can name, weighed against the time."
+   ],
+   "n": 82,
+   "pretty": "March 1, 2026",
+   "ptitle": "The library was my palace"
+  },
+  {
+   "page": "p83",
+   "tag": "turning",
+   "title": "Confession",
+   "quotes": [
+    {
+     "x": "My voice remain a steady of steel yet my eyes poured like a faucet onto the bleacher chairs."
+    },
+    {
+     "x": "he listened he felt he reflected he was that Menter I craved so bad",
+     "c": "he listened he felt he reflected he was that mentor I craved so bad"
+    }
+   ],
+   "note": [
+    "The best single sentence in the book. Voice like steel, eyes like a faucet, and then the bleacher chairs — because this is a gymnasium, not a cathedral, and the specific ordinary detail is what makes the rest true.",
+    "Then four verbs with no commas: he listened he felt he reflected he was. For weeks he'd been writing that he wanted a mentor and doubted one existed. He found him in a folding chair on a Sunday."
+   ],
+   "n": 83,
+   "pretty": "March 1, 2026",
+   "ptitle": "Confession"
+  },
+  {
+   "page": "p97",
+   "tag": "turning",
+   "title": "Hubbard's last day",
+   "quotes": [
+    {
+     "x": "today's Hubbard's last day I wish I did more too Step in on his sake, but I was the first person to shake. His hand gave him a hug he thanked me deeply for everything"
+    }
+   ],
+   "note": [
+    "The moral resolution of the longest relationship in the book — the kid the whole company used as a punching bag, who he volunteered to be battle buddy for on week one and never stopped covering.",
+    "He gets it exactly backwards in the best way: he opens by wishing he'd done more, then reports being the only one who said goodbye. He doesn't notice those sit strangely together. That's what makes it true."
+   ],
+   "n": 97,
+   "pretty": "March 19, 2026",
+   "ptitle": "Hubbard's last day"
+  },
+  {
+   "page": "p99",
+   "tag": "craft",
+   "title": "Embers",
+   "quotes": [
+    {
+     "x": "for so long inside me Amber's formed in my heart. I tried so hard to sniff them out stomping drowning, neglecting but blind eye can still see in the minds eye.",
+     "c": "for so long inside me embers formed in my heart. I tried so hard to sniff them out stomping drowning, neglecting but blind eye can still see in the minds eye."
+    },
+    {
+     "x": "These aches don't feel like growing pains they've etched themselves into every muscle, even my frontal lobe. I don't know if this is what I should fight or fight for"
+    },
+    {
+     "x": "Am I burning up with passion or being pulled into hell why do I desire things? I don't need why would I throw everything else away for a night is it going to be like this forever bending until I break"
+    }
+   ],
+   "note": [
+    "The best writing in the book, filed under \"I've many pages to fill, so I guess I'm gonna add some filler.\"",
+    "One metaphor held from the first line to the last without a slip: embers, sparks, flames, burning up, hell. A physical inventory that escalates — hands, cheeks, jaw, eyes. Then \"even my frontal lobe,\" the turn that makes it his and is also just accurate: this has moved out of the body and into the thinking.",
+    "\"Fight or fight for\" carries the entire moral question in four words. And it ends unresolved, on a question, with no lesson attached — which almost nothing else in the journal manages.",
+    "Two accidents worth keeping. \"Bending until I break\" is forge language, written seven days after the Forge. And the phone turned \"snuff\" into \"sniff,\" in a poem about a man undone by a smell."
+   ],
+   "n": 99,
+   "pretty": "March 20, 2026",
+   "ptitle": "Embers"
+  }
+ ],
+ "tags": {
+  "craft": "The writing",
+  "turning": "Turning point",
+  "thread": "A running thread",
+  "gut": "Gut punch",
+  "thinking": "Thinking it through"
+ }
+};
+
 // Drawings from the notebook.
 //
 // The journal marks 5 drawings. Until an image is added here each one renders as
@@ -5973,6 +6508,7 @@ window.ART = {
 
   var J = window.JOURNAL || { entries: [], chapters: [], stats: {} };
   var Q = window.QUESTIONS || { questions: [], cats: [] };
+  var P = window.PASSAGES || { items: [], tags: {} };
   var ART = window.ART || {};
 
   var entries = J.entries;
@@ -6030,6 +6566,7 @@ window.ART = {
   setText("#stArt", J.stats.art);
   setText("#stFix", (J.stats.fixes || 0).toLocaleString());
   setText("#stFix2", (J.stats.fixes || 0).toLocaleString());
+  setText("#stPass", P.items.length);
 
   /* ── render journal ─────────────────────────────────────── */
   function artHTML(entry, block, idx) {
@@ -6092,6 +6629,7 @@ window.ART = {
     try { localStorage.setItem("basic-mode", clean ? "clean" : "raw"); } catch (e) {}
     paintMode();
     renderPages();
+    renderPassages();
 
     if (keepId) {
       var el = document.getElementById(keepId);
@@ -6117,7 +6655,8 @@ window.ART = {
   });
 
   /* ── views ──────────────────────────────────────────────── */
-  var views = { journal: $("#view-journal"), ask: $("#view-ask"), about: $("#view-about") };
+  var views = { journal: $("#view-journal"), passages: $("#view-passages"),
+                ask: $("#view-ask"), about: $("#view-about") };
   var current = "journal";
 
   function show(name, keepScroll) {
@@ -6258,6 +6797,60 @@ window.ART = {
   renderCats();
   renderQuestions(Q.questions);
 
+  /* ── passages ───────────────────────────────────────────── */
+  var activeTag = null;
+
+  function passageHTML(it, i) {
+    var quotes = it.quotes.map(function (q) {
+      return '<blockquote class="excerpt">' + esc(txt(q)) + "<\/blockquote>";
+    }).join("");
+    var note = it.note.map(function (n) { return "<p>" + esc(n) + "<\/p>"; }).join("");
+    var e = byId[it.page];
+    return '<article class="passage" id="x-' + it.page + '">' +
+      '<div class="p-head">' +
+      '<span class="p-num">' + String(i + 1).padStart(2, "0") + "<\/span>" +
+      '<span class="p-tag">' + esc(P.tags[it.tag] || it.tag) + "<\/span>" +
+      "<h3>" + esc(it.title) + "<\/h3><\/div>" +
+      quotes +
+      '<div class="p-note">' + note + "<\/div>" +
+      '<p class="p-src"><a href="#' + it.page + '" data-page="' + it.page + '">' +
+      "Read page " + it.n + (it.pretty ? " · " + esc(it.pretty) : "") +
+      " — " + esc(it.ptitle) + " →<\/a><\/p>" +
+      "<\/article>";
+  }
+
+  function renderPassages() {
+    var list = activeTag
+      ? P.items.filter(function (i) { return i.tag === activeTag; })
+      : P.items;
+    $("#passages").innerHTML = list.map(passageHTML).join("");
+  }
+
+  function renderPtags() {
+    var counts = {};
+    P.items.forEach(function (i) { counts[i.tag] = (counts[i.tag] || 0) + 1; });
+    var html = ['<button data-tag="">All ' + P.items.length + "<\/button>"];
+    Object.keys(P.tags).forEach(function (k) {
+      if (counts[k])
+        html.push('<button data-tag="' + k + '">' + esc(P.tags[k]) + " " + counts[k] + "<\/button>");
+    });
+    $("#ptags").innerHTML = html.join("");
+    $$("#ptags button").forEach(function (b) {
+      b.classList.toggle("is-on", (b.getAttribute("data-tag") || null) === activeTag);
+    });
+  }
+
+  $("#ptags").addEventListener("click", function (ev) {
+    var b = ev.target.closest("button");
+    if (!b) return;
+    activeTag = b.getAttribute("data-tag") || null;
+    renderPtags();
+    renderPassages();
+  });
+
+  renderPtags();
+  renderPassages();
+
   /* ── search ─────────────────────────────────────────────── */
   var searchBox = $("#q");
   var resultsHost = document.createElement("div");
@@ -6320,11 +6913,16 @@ window.ART = {
   });
 
   /* ── keyboard ───────────────────────────────────────────── */
-  // the first page still showing below the sticky header
+  // the first page still showing below the sticky header, whatever height it is
+  function headerBottom() {
+    var t = $(".topbar");
+    return (t ? t.getBoundingClientRect().height : 64) + 16;
+  }
+
   function visiblePage() {
-    var sheets = $$(".sheet");
+    var sheets = $$(".sheet"), edge = headerBottom();
     for (var i = 0; i < sheets.length; i++) {
-      if (sheets[i].getBoundingClientRect().bottom > 80) return sheets[i];
+      if (sheets[i].getBoundingClientRect().bottom > edge) return sheets[i];
     }
     return sheets[sheets.length - 1] || null;
   }

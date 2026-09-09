@@ -43,6 +43,7 @@ def main():
     bundle = "\n".join([
         safe(read("data", "entries.js")),
         safe(read("data", "questions.js")),
+        safe(read("data", "passages.js")),
         safe(read("data", "art.js")),
         safe(read("assets", "app.js")),
     ])
