@@ -10,6 +10,17 @@
   var byId = {};
   entries.forEach(function (e) { byId[e.id] = e; });
 
+  // Raw = the dictation as the phone recorded it. Cleaned = with the
+  // voice-to-text corrections in source/fixes.txt applied.
+  var clean = true;
+  try {
+    var savedMode = localStorage.getItem("basic-mode");
+    if (savedMode === "raw") clean = false;
+  } catch (e) {}
+
+  // the text to show for a block or a pull quote, per the current mode
+  function txt(o) { return (clean && o.c) ? o.c : o.x; }
+
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
 
@@ -48,6 +59,8 @@
   setText("#stQ", Q.questions.length);
   setText("#stQ2", Q.questions.length);
   setText("#stArt", J.stats.art);
+  setText("#stFix", (J.stats.fixes || 0).toLocaleString());
+  setText("#stFix2", (J.stats.fixes || 0).toLocaleString());
 
   /* ── render journal ─────────────────────────────────────── */
   function artHTML(entry, block, idx) {
@@ -67,7 +80,7 @@
   function pageHTML(e) {
     var art = 0;
     var body = e.blocks.map(function (b) {
-      if (b.t === "p") return "<p>" + esc(b.x) + "</p>";
+      if (b.t === "p") return "<p>" + esc(txt(b)) + "</p>";
       if (b.t === "art") { art++; return artHTML(e, b, art); }
       return '<p class="redacted">[' + esc(b.x) + "]</p>";
     }).join("");
@@ -90,7 +103,38 @@
       head + "<h3>" + esc(e.title) + "</h3>" + body + "</article>";
   }
 
-  $("#pages").innerHTML = entries.map(pageHTML).join("");
+  function renderPages() { $("#pages").innerHTML = entries.map(pageHTML).join(""); }
+  renderPages();
+
+  var modeBtn = $("#mode");
+  function paintMode() {
+    modeBtn.textContent = clean ? "Cleaned" : "Raw";
+    modeBtn.setAttribute("aria-pressed", clean ? "true" : "false");
+  }
+  paintMode();
+
+  modeBtn.addEventListener("click", function () {
+    // hold the reader's place across the re-render
+    var anchor = visiblePage();
+    var keepId = anchor ? anchor.id : null;
+    var offset = anchor ? anchor.getBoundingClientRect().top : 0;
+
+    clean = !clean;
+    try { localStorage.setItem("basic-mode", clean ? "clean" : "raw"); } catch (e) {}
+    paintMode();
+    renderPages();
+
+    if (keepId) {
+      var el = document.getElementById(keepId);
+      if (el) window.scrollTo(0, window.scrollY + el.getBoundingClientRect().top - offset);
+    }
+    // reopen any answer so its quotes switch too
+    $$(".qa.open").forEach(function (box) {
+      var btn = $("button", box);
+      btn.click(); btn.click();
+    });
+    if (searchBox.value.trim()) runSearch(searchBox.value);
+  });
 
   $("#chapters").innerHTML = J.chapters.filter(function (c) { return c.count; })
     .map(function (c) {
@@ -166,7 +210,7 @@
     if (q.pulls.length) {
       html += '<div class="receipts"><h4>From the journal</h4>' +
         q.pulls.map(function (pu) {
-          return '<blockquote class="pull"><q>' + esc(pu.x) + "</q>" + pageRef(pu.p) + "</blockquote>";
+          return '<blockquote class="pull"><q>' + esc(txt(pu)) + "</q>" + pageRef(pu.p) + "</blockquote>";
         }).join("");
       var extra = q.cites.filter(function (id) {
         return !q.pulls.some(function (pu) { return pu.p === id; });
@@ -279,7 +323,7 @@
     var hits = [];
     entries.forEach(function (e) {
       var text = e.blocks.filter(function (b) { return b.t === "p"; })
-        .map(function (b) { return b.x; }).join(" ");
+        .map(txt).join(" ");
       var hay = (e.title + " " + (e.head || "") + " " + text).toLowerCase();
       if (hay.indexOf(term) >= 0) hits.push({ e: e, text: text });
     });

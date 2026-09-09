@@ -106,6 +106,12 @@ code{font:13px/1.5 var(--mono);background:var(--pen-soft);padding:1px 5px;border
 .search input:focus{outline:2px solid var(--pen);outline-offset:-1px;border-color:transparent}
 .search kbd{position:absolute;right:8px;top:7px;pointer-events:none}
 .search input:focus + kbd{opacity:0}
+.mode-btn{
+  font:500 12.5px/1 var(--sans);padding:9px 11px;cursor:pointer;color:var(--ink-2);
+  background:var(--sheet);border:1px solid var(--rule);border-radius:8px;white-space:nowrap;
+}
+.mode-btn:hover{color:var(--ink);border-color:var(--ink-3)}
+.mode-btn[aria-pressed="false"]{background:var(--pen-soft);color:var(--pen);border-color:var(--pen)}
 .icon-btn{
   font-size:16px;line-height:1;width:34px;height:34px;cursor:pointer;color:var(--ink-2);
   background:var(--sheet);border:1px solid var(--rule);border-radius:8px;
@@ -280,6 +286,7 @@ code{font:13px/1.5 var(--mono);background:var(--pen-soft);padding:1px 5px;border
   body{font-size:16.5px}
   .tabs .tab{padding:8px 9px;font-size:13.5px}
   .tools .search{display:none}
+  .mode-btn{padding:9px 9px;font-size:12px}
   .cover{padding:48px 0 40px}
 }
 @media (prefers-reduced-motion:reduce){

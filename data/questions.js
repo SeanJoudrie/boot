@@ -70,7 +70,8 @@ window.QUESTIONS = {
     },
     {
      "p": "p79",
-     "x": "I love and miss my first Foxhall. I will always remember you."
+     "x": "I love and miss my first Foxhall. I will always remember you.",
+     "c": "I love and miss my first foxhole. I will always remember you."
     }
    ],
    "cites": [
@@ -161,7 +162,8 @@ window.QUESTIONS = {
    "pulls": [
     {
      "p": "p3",
-     "x": "I thought that this would be like Jim and yelling but it's not like that at all."
+     "x": "I thought that this would be like Jim and yelling but it's not like that at all.",
+     "c": "I thought that this would be like gym and yelling but it's not like that at all."
     },
     {
      "p": "p10",
@@ -315,7 +317,8 @@ window.QUESTIONS = {
    "pulls": [
     {
      "p": "p78",
-     "x": "Apparently no sniffle gear because you'll overheat and we'll make sure you get an article 15 so obviously we had three casualties from fainting"
+     "x": "Apparently no sniffle gear because you'll overheat and we'll make sure you get an article 15 so obviously we had three casualties from fainting",
+     "c": "Apparently no snivel gear because you'll overheat and we'll make sure you get an article 15 so obviously we had three casualties from fainting"
     },
     {
      "p": "p18",
@@ -484,7 +487,8 @@ window.QUESTIONS = {
     },
     {
      "p": "p60",
-     "x": "car key gifted me an apple which I eat in the bathroom."
+     "x": "car key gifted me an apple which I eat in the bathroom.",
+     "c": "Karagach gifted me an apple which I eat in the bathroom."
     }
    ],
    "cites": [
@@ -605,7 +609,8 @@ window.QUESTIONS = {
     },
     {
      "p": "p30",
-     "x": "second platoon's morning, began with a caffeine of heaves and coughs as pneumonia has struck the barracks."
+     "x": "second platoon's morning, began with a caffeine of heaves and coughs as pneumonia has struck the barracks.",
+     "c": "second platoon's morning, began with a cacophony of heaves and coughs as pneumonia has struck the barracks."
     }
    ],
    "cites": [
@@ -708,7 +713,8 @@ window.QUESTIONS = {
     },
     {
      "p": "p23",
-     "x": "Harmon is more of an academic and Arthur is more street smart and boisterous."
+     "x": "Harmon is more of an academic and Arthur is more street smart and boisterous.",
+     "c": "Herman is more of an academic and Arthur is more street smart and boisterous."
     }
    ],
    "cites": [
@@ -815,7 +821,8 @@ window.QUESTIONS = {
     },
     {
      "p": "p9",
-     "x": "our drill. Sergeant looks like the smart guy in Idiocracy and has the faintest accent like Matthew McConaughey or Owen Wilson"
+     "x": "our drill. Sergeant looks like the smart guy in Idiocracy and has the faintest accent like Matthew McConaughey or Owen Wilson",
+     "c": "our drill sergeant looks like the smart guy in Idiocracy and has the faintest accent like Matthew McConaughey or Owen Wilson"
     },
     {
      "p": "p73",
@@ -1136,7 +1143,8 @@ window.QUESTIONS = {
     },
     {
      "p": "p7",
-     "x": "after getting yelled at to ciao Hall exercise only thing that bothered me was losing my mom."
+     "x": "after getting yelled at to ciao Hall exercise only thing that bothered me was losing my mom.",
+     "c": "after getting yelled at to chow hall exercise only thing that bothered me was losing my mom."
     }
    ],
    "cites": [
@@ -1268,7 +1276,8 @@ window.QUESTIONS = {
    "pulls": [
     {
      "p": "p83",
-     "x": "he listened he felt he reflected he was that Menter I craved so bad"
+     "x": "he listened he felt he reflected he was that Menter I craved so bad",
+     "c": "he listened he felt he reflected he was that mentor I craved so bad"
     },
     {
      "p": "p83",
@@ -1470,7 +1479,8 @@ window.QUESTIONS = {
    "pulls": [
     {
      "p": "p50",
-     "x": "My groupings were so good real Sergeant when he checked the targets After Every five told me to show the battalion commander who is a former Green Beret"
+     "x": "My groupings were so good real Sergeant when he checked the targets After Every five told me to show the battalion commander who is a former Green Beret",
+     "c": "My groupings were so good drill sergeant when he checked the targets After Every five told me to show the battalion commander who is a former Green Beret"
     },
     {
      "p": "p61",
@@ -1500,7 +1510,8 @@ window.QUESTIONS = {
     },
     {
      "p": "p47",
-     "x": "I think the ground was too frozen to allow us to sleep there overnight once we got back the drill. Sergeant thought it was bullshit."
+     "x": "I think the ground was too frozen to allow us to sleep there overnight once we got back the drill. Sergeant thought it was bullshit.",
+     "c": "I think the ground was too frozen to allow us to sleep there overnight once we got back the drill sergeant thought it was bullshit."
     }
    ],
    "cites": [
@@ -2131,7 +2142,8 @@ window.QUESTIONS = {
    "pulls": [
     {
      "p": "p21",
-     "x": "future me when you're home Wright more about how weird military life is like how there's a waterpark here at least not for us."
+     "x": "future me when you're home Wright more about how weird military life is like how there's a waterpark here at least not for us.",
+     "c": "future me when you're home write more about how weird military life is like how there's a waterpark here at least not for us."
     },
     {
      "p": "p22",

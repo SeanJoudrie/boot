@@ -29,6 +29,8 @@
         <input id="q" type="search" placeholder="Search the journal…" autocomplete="off" spellcheck="false">
         <kbd>/</kbd>
       </label>
+      <button id="mode" class="mode-btn" aria-pressed="true"
+        title="Switch between the raw dictation and the cleaned-up text">Cleaned</button>
       <button id="theme" class="icon-btn" title="Toggle light / dark">◐</button>
     </div>
   </div>
@@ -49,6 +51,7 @@
         <li><b id="stWords">—</b> words</li>
         <li><b>74</b> days</li>
         <li><b id="stQ">—</b> questions answered</li>
+        <li><b id="stFix">—</b> dictation fixes</li>
       </ul>
       <p class="scrolltip">Scroll, or jump to a chapter ↓</p>
     </div>
@@ -106,6 +109,17 @@
         what the entry says about the day. Dates without it were written on the page.
         Where the notebook has an obvious slip (a "February 2" entry sitting in the middle
         of February 11), the original heading is kept and the estimate sits beside it.</li>
+      <li><b>Two reading modes.</b> <em>Raw</em> is the dictation exactly as the phone
+        recorded it. <em>Cleaned</em> applies <b id="stFix2">—</b> corrections to the army
+        vocabulary the phone kept mangling — ruck, DFAC, MRE, chow, SHARP, drill sergeant,
+        foxhole. Toggle at the top right. The raw text is never overwritten; both ship.
+        Every rule lives in <code>source/fixes.txt</code> and every change it makes is
+        listed in <code>source/CHANGES.txt</code>.</li>
+      <li><b>Some errors were left alone on purpose,</b> because the mistake says something
+        the correction would lose — "I confessed about lost" (the phone censored <em>lust</em>),
+        "I tried so hard to sniff them out" in a poem about being undone by a smell,
+        "Gowdre" for how the drill sergeant actually said his name, and the moments of him
+        arguing with the dictation live on the page.</li>
       <li><b>The rough parts stayed in.</b> Slurs, the passage about race in the barracks,
         the parts about other trainees' worst days. It's a private journal written by
         somebody in a bad state, not a publication. Editing it after the fact would make

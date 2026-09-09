@@ -1,0 +1,135 @@
+# Voice-to-text corrections.
+#
+# The notebook was dictated by a cold, exhausted, starving guy, so the phone
+# mangled a lot of army vocabulary. These rules produce the "Cleaned" reading
+# mode. The raw text in journal.txt is never modified -- both versions ship and
+# the reader toggles between them.
+#
+# Format:   regex ||| replacement          (# starts a comment line)
+# Rules run in order, so put specific ones above general ones.
+# Every change is logged to source/CHANGES.txt -- review it after building.
+#
+# DELIBERATELY NOT FIXED, because the error says something the correction loses:
+#   "I confessed about lost"      -- the phone censored "lust"
+#   "I tried so hard to sniff"    -- "snuff", in a poem about being undone by a smell
+#   "Gowdre"                      -- how the drill sergeant actually said his name
+#   "WANDE holy shit dude WANED"  -- him fighting the dictation in real time
+#   "TARDS", "raffle Grapple"     -- same
+#   "press barbarian" asides      -- he's talking to the transcription itself
+
+# ── the dining facility ──────────────────────────────────────────────
+\bdefect\b ||| DFAC
+\bthe fact\b(?= I had| again| Saturday) ||| the DFAC
+\bhot ass\b ||| hot A's
+\bhot ace\b ||| hot A's
+\bhot 80s\b ||| hot A's
+\bhot days\b ||| hot A's
+\bhot a bit\b ||| hot A's, a bit
+\bciao Hall\b ||| chow hall
+\bciao\b ||| chow
+
+# ── rations ──────────────────────────────────────────────────────────
+\bMRI\b ||| MRE
+\bMRT\b ||| MRE
+\bMRs\b ||| MREs
+\bMR\b ||| MRE
+\bEmery's\b ||| MREs
+\bEmery\b ||| MRE
+\buncrossable\b ||| Uncrustables
+\buncrushables\b ||| Uncrustables
+
+# ── sick call ────────────────────────────────────────────────────────
+\bsick\.? Hall\b ||| sick call
+\bsee Hall\b ||| sick call
+\bsick hole\b ||| sick call
+\bsick base\b ||| sick call
+
+# ── the ruck (only where it means the pack, never a literal rock) ─────
+\brocked\b ||| rucked
+\brocking\b ||| rucking
+\bour rocks\b ||| our rucks
+\bour rock\b ||| our ruck
+\btheir rocks\b ||| their rucks
+\b(\d+) mile rock\b ||| \1 mile ruck
+\b(\d+) pound rock\b ||| \1 pound ruck
+\bthe rock (was|tomorrow) ||| the ruck \1
+\bbefore the rock\b ||| before the ruck
+\bI enjoyed the rock\b ||| I enjoyed the ruck
+\bon the rock in the cold\b ||| on the ruck in the cold
+\brock is tomorrow\b ||| ruck is tomorrow
+\brock hike camp\b ||| ruck hike camp
+\bfinally do the rock\b ||| finally do the ruck
+\bprepare for the rock\b ||| prepare for the ruck
+\bhave rock lol\b ||| have a ruck lol
+
+# ── drill sergeants ──────────────────────────────────────────────────
+\b(Joe|Jill|jewel|true|real|Jo) [Ss]ergeants\b ||| drill sergeants
+\b(Joe|Jill|jewel|true|real|Jo) [Ss]ergeant\b ||| drill sergeant
+\bdrill\.? Sergeant\b ||| drill sergeant
+\bdrill Sergeant\b ||| drill sergeant
+\bDrill Sergeant\b ||| drill sergeant
+
+# ── SHARP ────────────────────────────────────────────────────────────
+\bsash\b ||| SHARP
+\bSash\b ||| SHARP
+\bsasher\b ||| SHARP rep
+\bSASHER\b ||| SHARP rep
+\bas Reph I am known\b ||| as SHARP rep I am known
+
+# ── kit and places ───────────────────────────────────────────────────
+\bsniffle gear\b ||| snivel gear
+\bCamelback\b ||| CamelBak
+\bFoxhall\b ||| foxhole
+\bSplatoon\b ||| platoon
+\btow the line\b ||| toe the line
+\btold the line\b ||| toe the line
+\bstriped cameos\b ||| striped camos
+\bfull lotto\b ||| full auto
+\bfilled the AFD\b ||| failed the AFT
+\bBHH\b ||| BAH
+\bmy BH\b ||| my BAH
+\bgas Masse\b ||| gas mask
+\bMasse\b ||| Mass
+\bCatholic mess\b ||| Catholic Mass
+\bJim\b ||| gym
+
+# ── times ────────────────────────────────────────────────────────────
+\boh ?400\b ||| 0400
+\boh ?600\b ||| 0600
+\bzero ?500\b ||| 0500
+\bzero ?100\b ||| 0100
+\b0 500\b ||| 0500
+
+# ── words the phone simply lost ──────────────────────────────────────
+\bcaffeine of heaves\b ||| cacophony of heaves
+\bthe steaks are so high\b ||| the stakes are so high
+\bit had pros\b ||| it had prose
+\bso course\b ||| so coarse
+\bshadenfreunde\b ||| schadenfreude
+\bKjerrumgaard Kierkegaard\b ||| Kierkegaard
+\bnietzche\b ||| Nietzsche
+\bstraight of hormones HORMUZ\b ||| Strait of Hormuz
+\bfutons\b ||| photons
+\bplanks length\b ||| Planck length
+\btiny trays to degrades TARDIGRADES\b ||| tiny tardigrades
+\baura Boros\b ||| ouroboros
+\bMenter\b ||| mentor
+\bimmortal sin\b ||| mortal sin
+\baFantasia\b ||| aphantasia
+\bWright more\b ||| write more
+\bfresh barbarian\b ||| Presbyterian
+\bpress barbarian\b ||| Presbyterian
+\bhalf stance\b ||| happenstance
+\bthe pallet\b ||| the palate
+\bAmber's formed in my heart\b ||| embers formed in my heart
+\bmy jaw, clinch\b ||| my jaw clench
+\bLoki\b ||| low-key
+\bcult rider\b ||| Kaltrider
+\bCult rider\b ||| Kaltrider
+\bcult writer\b ||| Kaltrider
+\bCult writer\b ||| Kaltrider
+\bcult Rider\b ||| Kaltrider
+\bCar gosh\b ||| Karagach
+\bcar key\b ||| Karagach
+\bCar key\b ||| Karagach
+\bHarmon\b ||| Herman

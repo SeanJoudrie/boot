@@ -6,10 +6,14 @@ Run:  python3 tools/build_questions.py
 """
 import json, os, re, sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import fixes as fixlib
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "source", "questions.txt")
 ENT = os.path.join(ROOT, "data", "entries.js")
 OUT = os.path.join(ROOT, "data", "questions.js")
+RULES = []
 
 
 def load_entries():
@@ -35,6 +39,8 @@ def slug(text, used):
 
 
 def main():
+    global RULES
+    RULES = fixlib.load_rules()
     pages = load_entries()
     with open(SRC, encoding="utf-8") as fh:
         raw = fh.read()
@@ -89,7 +95,11 @@ def main():
                 errors.append("line %d: quote not found on %s: %r"
                               % (lineno, pid, norm[:70]))
                 continue
-            cur["pulls"].append({"p": pid, "x": quote})
+            pull = {"p": pid, "x": quote}
+            cleaned = fixlib.apply(quote, RULES)
+            if cleaned != quote:
+                pull["c"] = cleaned          # matches the page in Cleaned mode
+            cur["pulls"].append(pull)
             if pid not in cur["cites"]:
                 cur["cites"].append(pid)
             continue
